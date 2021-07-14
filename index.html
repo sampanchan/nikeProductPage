@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="x-ua-compatible" content="ie=edge" />
+		<title>Nike Shop</title>
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Khula:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" >
+		<link rel="stylesheet" href="dist/css/main.css" />
+
+		
+	</head>
+
+	<body>
+		<header class="nike-nav">
+			<img src="/dist/img/nikeLogo.png" alt="nike logo" class="logo">
+			<div class="nike-header-menu">
+				<input type="checkbox" id="nike-header-menu" />
+
+				<div class="nike-header-icon-container">
+					<img src="/dist/img/shopping-bag.png" alt="shopping bag logo" class="icons">
+					<img src="/dist/img/search-interface-symbol.png" alt="search logo" class="icons">
+				</div>
+				
+				<label for="nike-header-menu" class="nike-menu">
+					<span></span>
+					<span></span>
+				</label>
+				
+				<nav class="nike-nav-open">
+					<ul>
+						<li><a href="">New Releases</a></li>
+						<li><a href="">Men</a></li>
+						<li><a href="">Women</a></li>
+						<li><a href="">Kids</a></li>
+						<li><a href="">Customize</a></li>
+						<li><a href="">Sale</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<section class="sale-banner">
+			<div class="sale-banner-div">
+				<p>Free Shipping & 60 day Free Returns</p>
+				<p>Join Now</p>
+			</div>
+		</section>
+		<main class="nike-main">
+			<div class="nike-title title">
+				<h1>air beyond compare</h1>
+				<span>Explore the best of Nike</span>
+				<button class="btn btn-primary">Shop</button>
+				<h2>Air Max</h2>
+			</div>
+			<section class="nike-grid primary-grid sections">
+				<div class="nike-image max-one">
+					<button class="btn btn-secondary">Shop Men's</button>
+				</div>
+				<div class="nike-image max-two">
+					<button class="btn btn-secondary">Shop Women's</button>
+				</div>
+				<div class="nike-image max-three">
+					<button class="btn btn-secondary">Shop Kid's</button>
+				</div>
+				<div class="nike-image max-four">
+					<button class="btn btn-secondary">Shop All</button>
+				</div>
+			</section>
+			<section class="featured-styles sections">
+				<h3>Featured Styles</h3>
+				<div class="nike-grid secondary-grid">
+					<div class="nike-image style-one">
+						<h4 class="outfit-essentials">Outfit Essentials</h4>
+						<button class="btn btn-primary" id="style-btn-one">Shop</button>
+					</div>
+					<div class="nike-image style-two">
+						<h4 class="be-different">Be Different: Ambient Colors</h4>
+						<button class="btn btn-primary" id="style-btn-two">Shop</button>
+					</div>
+				</div>
+			</section>
+			<section class="nike-shoe-list sections">
+				<h3>The Latest And Greatest</h3>
+				<div class="nike-grid tertiary-grid">
+					<div class="nike-image shoe-one" id="shoe"></div>
+					<div class="shoe-description shoe-specs-one">
+						<h5 class="max-90">Nike Air Max 90</h5>
+						<p>Womens' Shoe</p>
+						<p>14 colors</p>
+						<span class="price">$100</span>
+					</div>
+					<div class="nike-image shoe-two" id="shoe"></div>
+					<div class="shoe-description shoe-specs-two">
+						<h5 class="max-90">Jordan 'Why Not?' Zer0.4</h5>
+						<p>Basketball Shoe</p>
+						<p>2 colors</p>
+						<span class="price">$130</span>
+					</div>
+					<div class="nike-image shoe-three" id="shoe"></div>
+					<div class="shoe-description shoe-specs-three">
+						<h5 class="max-90">Nike Air Max 270</h5>
+						<p>Big Kids' Shoe</p>
+						<p>15 colors</p>
+						<span class="price">$120</span>
+					</div>	
+					<div class="nike-image shoe-four" id="shoe"></div>
+					<div class="shoe-description shoe-specs-four">
+						<h5 class="max-90">Nike Air Huarache</h5>
+						<p>Womens' Shoe</p>
+						<p>3 colors</p>
+						<span class="price">$120</span>
+					</div>
+				</div>
+			</section>
+			<section class="trending sections">
+				<h3>Trending</h3>
+				<div class="nike-grid secondary-grid">
+					<div class="nike-image trend-one" id="trend">
+						<h4 class="new-trend">New Styles for All Athletes</h4>
+						<button class="btn btn-secondary" id="style-btn-one">Shop</button>
+					</div>
+					<div class="nike-image trend-two" id="trend">
+						<h4 class="shoe-trend">Look Good in The Gym</h4>
+						<button class="btn btn-secondary" id="style-btn-two">Shop</button>
+					</div>
+				</div>
+			</section>
+			<section class="member-benefits sections">
+				<h3>Member Benefits</h3>
+				<figure>
+					<div class="benefits-banner secondary-grid">
+						<img src="/dist/img/nike-just-do-it.jpeg" alt="where-all-atheles-belong-poster">
+					</div>
+				
+					<figcaption>
+						<p>Things are better as a Nike Member. Get first and exclusive access
+							to the newest styles & innovation, free shipping, birthday rewards
+							and more</p>
+							<div class="member-btns">
+								<button class="btn btn-primary" id="style-btn-two">Join Us</button>
+								<button class="btn btn-primary" id="style-btn-two">Sign In</button>
+							</div>
+							
+					</figcaption>
+				</figure>
+			</section>
+			<section class="nike-links">
+				<ul>
+					<li><a href="">Featured</a></li>
+					<li><a href="">Shoes</a></li>
+					<li><a href="">Clothing</a></li>
+					<li><a href="">Kids</a></li>
+				</ul>
+			</section>
+		</main>
+		<footer class="nike-footer">
+			<div id="external-links">
+				<ul class="external-links">
+					<li><a href="">gift cards</a></li>
+					<li><a href="">promotions</a></li>
+					<li><a href="">find a store</a></li>
+					<li><a href="">sign up for email</a></li>
+					<li><a href="">become a member</a></li>
+					<li><a href="">nike journal</a></li>
+					<li><a href="">send feedback</a></li>
+				</ul>
+			</div>
+			<div id="external-links">
+				<ul class="external-links flex-links">
+					<div>
+						<li><a href="">get help</a></li>
+						<span>+</span>
+					</div>
+					<div>
+						<li><a href="">about nike</a></li>
+						<span>+</span>
+					</div>
+				</ul>
+			</div>
+			<section class="social-media">
+				<i class="fab fa-twitter"></i>
+				<i class="fab fa-facebook-f"></i>
+				<i class="fab fa-youtube"></i>
+				<i class="fab fa-instagram"></i>
+			</section>
+			<div class="location-copyright">
+				<div class="location">
+					<div>
+						<i class="fas fa-map-marker-alt"></i>
+						<p>United States</p>
+					</div>
+					<p>&#169; 2021 Nike, Inc. All Rights Reserved</p>
+				</div>
+				<ul class="terms-links">
+					<li><a href="">Guides</a></li>
+					<li><a href="">Terms of Sale</a></li>
+					<li><a href="">Terms of Use</a></li>
+					<li><a href="">Nike Privacy Policy</a></li>
+					<li><a href="">CA Supply Chains Act</a></li>
+				</ul>
+			</div>
+			
+			
+		</footer>
+
+		<script src="dist/js/main.js"></script>
+	</body>
+</html>

@@ -1,0 +1,32 @@
+@use "variables";
+
+//small devices
+@mixin  bp-small {
+    @media screen and (min-width: variables.$breakpoint-phone) {
+        
+        @content;
+    }
+}
+
+
+//medium devices
+@mixin bp-medium {
+    @media screen and (min-width: variables.$breakpoint-tablet) {
+        @content;
+    }
+}
+
+//Large devices
+@mixin bp-large {
+    @media screen and (min-width: variables.$breakpoint-desktop) {
+        @content;
+    }
+}
+
+//XL devices
+@mixin bp-xl {
+    @media screen and (min-width: variables.$breakpoint-xl) {
+        @content;
+    }
+    
+}
