@@ -173,6 +173,7 @@ div.loading {
   height: 100vh;
   width: 100vw;
   background-color: white;
+  pointer-events: none;
   z-index: 1000;
   opacity: 1;
   transition: 2s;
