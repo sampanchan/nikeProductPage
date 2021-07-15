@@ -43,19 +43,37 @@ body {
 
 /* 2. Content ================================= */
 
-// div.loading {
-// 	position: fixed;
-// 	height: 100vh;
-// 	width: 100vw;
-// 	background-color: white;;
-// 	z-index: 1000;
-// 	opacity: 1;;
-// 	transition: 2s;
+div.loading {
+	position: fixed;
+	height: 100vh;
+	width: 100vw;
+	// background-image: url(/dist/img/logo3.jpg);
+	// background-position: cover;
+	// background-repeat:no-repeat;
+	background-color: white;;
 
-// 	&.hide {
-// 		opacity: 0;;
-// 	}
-// }
+	z-index: 1000;
+	opacity: 1;;
+	transition: 2s;
+	img{
+		position: absolute;
+		top:25%;
+		left:20%;
+		@include mixins.bp-medium{
+			top:30%;
+			left:20%;
+		}
+		@include mixins.bp-large{
+			
+			left:40%;
+		}
+	}
+
+
+	&.hide {
+		opacity: 0;;
+	}
+}
 
 
 header{
@@ -293,7 +311,7 @@ header{
 		}
 		.max-one{
 			// grid-column: 1;
-			background-image: url(/dist/img/nike1.jpeg);
+			background-image: url(/dist/img/nike1.jpg);
 			.btn-secondary{
 				@include mixins.bp-medium{
 					left: 15%;
@@ -306,7 +324,7 @@ header{
 			}			
 		}
 		.max-two{
-			background-image: url(/dist/img/nike2.jpeg);
+			background-image: url(/dist/img/nike2.jpg);
 			background-position-x: 60%;
 			.btn-secondary{
 				bottom: 50%;
@@ -321,7 +339,7 @@ header{
 			}
 		}
 		.max-three{
-			background-image: url(/dist/img/nikeKids2.jpeg);
+			background-image: url(/dist/img/nikeKids2.jpg);
 			background-position-x: 40%;
 			.btn-secondary{
 				bottom: 0%;
@@ -336,7 +354,7 @@ header{
 			}
 		}
 		.max-four{
-			background-image: url(/dist/img/nike3.jpeg);
+			background-image: url(/dist/img/nike3.jpg);
 			background-position-x: 40%;
 			.btn-secondary{
 				bottom: 0%;
@@ -367,7 +385,7 @@ header{
 				// margin:1em;
 				grid-column: 2;
 				grid-row: 1;
-				background-image: url(/dist/img/nike14.jpeg);
+				background-image: url(/dist/img/nike14.jpg);
 				width: 95vw;
 				height: 90vh;
 				@include mixins.bp-medium{
@@ -375,12 +393,13 @@ header{
 					grid-row: 1;
 					width: 50vw;
 					height: 65vh;
+					background-position-y: 70%;
 				}
 			}
 			.style-two{
 				grid-column: 2;
 				grid-row: 2;
-				background-image: url(/dist/img/nike15.jpeg);
+				background-image: url(/dist/img/nike15.jpg);
 				width: 95vw;
 				height: 90vh;
 				@include mixins.bp-medium{
@@ -388,6 +407,7 @@ header{
 					grid-row: 1;
 					width: 50vw;
 					height: 65vh;
+					background-position-y: 100%;
 				}
 			}
 			h4{
@@ -477,7 +497,7 @@ header{
 			.shoe-one{
 				grid-column: 2/6;
 				grid-row: 1;
-				background-image: url(/dist/img/nike20.jpeg);
+				background-image: url(/dist/img/nike20.jpg);
 				@include mixins.bp-medium{
 					grid-column: 2/3;
 				}
@@ -489,7 +509,7 @@ header{
 			.shoe-two{
 				grid-column: 2/6;
 				grid-row: 3;
-				background-image: url(/dist/img/nike21.jpeg);
+				background-image: url(/dist/img/nike21.jpg);
 				@include mixins.bp-medium{
 					grid-column: 4/5;
 					grid-row: 1;
@@ -501,7 +521,7 @@ header{
 			.shoe-three{
 				grid-column: 2/6;
 				grid-row: 5;
-				background-image: url(/dist/img/nike22.jpeg);
+				background-image: url(/dist/img/nike22.jpg);
 				@include mixins.bp-medium{
 					grid-column: 2/3;
 					grid-row: 3;
@@ -514,7 +534,7 @@ header{
 			.shoe-four{
 				grid-column: 2/6;
 				grid-row: 7;
-				background-image: url(/dist/img/nike23.jpeg);
+				background-image: url(/dist/img/nike23.jpg);
 				@include mixins.bp-medium{
 					grid-column: 4/5;
 					grid-row: 3;
@@ -617,7 +637,7 @@ header{
 				// margin:1em;
 				grid-column: 2;
 				grid-row: 1;
-				background-image: url(/dist/img/nike6.jpeg);
+				background-image: url(/dist/img/nike6.jpg);
 				@include mixins.bp-medium{
 					grid-column: 2;
 					grid-row: 1;
@@ -628,7 +648,7 @@ header{
 			.trend-two{
 				grid-column: 2;
 				grid-row: 2;
-				background-image: url(/dist/img/nike7.jpeg);
+				background-image: url(/dist/img/nike7.jpg);
 				@include mixins.bp-medium{
 					grid-column: 3;
 					grid-row: 1;
