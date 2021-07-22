@@ -17,14 +17,18 @@
 	</head>
 
 	<body>
+		<a class="main-content-link" href="#main-content">Skip To Main Content</a>
 
 		<div class="loading">
 			<img src="/dist/img/logo3.jpg" alt="nike loading logo">
 		</div>
 
 		<header class="nike-nav">
-			<img src="/dist/img/nikeLogo.png" alt="nike logo" class="logo">
-			<div class="nike-header-menu">
+			<a href="index.html">
+				<img src="/dist/img/nikeLogo.png" alt="nike logo home button" class="logo">
+			</a>
+			
+			<div class="nike-header-menu" aria-label="menu">
 				<input type="checkbox" id="nike-header-menu" />
 
 				<div class="nike-header-icon-container">
@@ -37,14 +41,15 @@
 					<span></span>
 				</label>
 				
-				<nav>
+				<nav aria-label="menu">
 					<ul>
-						<li><a href="">New Releases</a></li>
-						<li><a href="">Men</a></li>
-						<li><a href="">Women</a></li>
-						<li><a href="">Kids</a></li>
-						<li><a href="">Customize</a></li>
-						<li><a href="">Sale</a></li>
+						<li><a href="#">New Releases</a></li>
+						<li><a href="#">Men</a></li>
+						<li><a href="#">Women</a></li>
+						<li><a href="#">Kids</a></li>
+						<li><a href="#">Customize</a></li>
+						<li><a href="#">Sale</a></li>
+						<li><a href="login.html">Sign Up/ Login</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -55,7 +60,7 @@
 				<p>Join Now</p>
 			</div>
 		</section>
-		<main class="nike-main">
+		<main class="nike-main" id="main-content">
 			<div class="nike-title title">
 				<h1>air beyond compare</h1>
 				<span>Explore the best of Nike</span>
@@ -91,7 +96,7 @@
 			</section>
 			<section class="nike-shoe-list sections">
 				<h3>The Latest And Greatest</h3>
-				<div class="nike-grid tertiary-grid">
+				<div class="nike-grid tertiary-grid" aria>
 					<div class="nike-image shoe-one" id="shoe"></div>
 					<div class="shoe-description shoe-specs-one">
 						<h5 class="max-90">Nike Air Max 90</h5>

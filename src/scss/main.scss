@@ -41,6 +41,7 @@ body {
 	
 }
 
+
 /* 2. Content ================================= */
 
 div.loading {
@@ -70,6 +71,24 @@ div.loading {
 	&.hide {
 		opacity: 0;;
 		
+	}
+}
+.main-content-link{
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	background-color: black;
+	padding: .5em;
+	border-radius: 5px;
+	margin-top: 1em;
+	font-size: 10px;
+	position: absolute;
+	top:-1%;
+	left:1%;
+	&:hover{
+		background: rgb(12, 90, 150);
+		color: white;
+
 	}
 }
 
@@ -184,7 +203,8 @@ header{
     				flex-direction: row;
 					text-align: center;
 					margin-top: 0;
-					margin-left: 0;
+					margin-left:-4em;;
+					align-items: center;
 					
 
 				}
@@ -204,7 +224,7 @@ header{
 							}
 						}
 						@include mixins.bp-medium{
-							font-size: 1.1em;
+							font-size: 1em;
 							margin-right: 1em;
 							
 						}
@@ -812,8 +832,8 @@ header{
 	font-size: 1em;
 	// width: 10%;
 	&:hover{
-		opacity: 50%;
-		border:solid black 2px;
+		background: rgb(12, 90, 150);
+		// border:solid black 2px;
 		transition: .2s ease-in-out;
 	}
 }
@@ -830,9 +850,10 @@ header{
 	text-align: center;
 	justify-self: center;
 	&:hover{
-		opacity: 60%;
-		border: 2px solid transparent;
+		background: rgb(0, 0, 0);
+		// border: 2px solid transparent;
 		transition: .2s ease-in-out;
+		color: white;
 	}
 }
 footer{
@@ -867,15 +888,23 @@ footer{
 
 		}
 		
+		// .fas{
+		// 	color: white;
+		// 	margin-right:.5em ;
+		// }
+		// .fa-minus{
+		// 	display: none;
+		// }
+		// .active{
+		// 	display: block;
+		// }
 		.flex-links{
+			// text-align: center;
 			@include mixins.bp-medium{
 				justify-content: center;
-			}
-			
-			span{
-				color: white;
-			}
+			}	
 		}
+		
 		
 	}
 	.social-media{
@@ -945,4 +974,144 @@ footer{
 			}
 		}
 	}
+}
+
+// Sign In
+.sign-up-main{
+	margin-bottom: 2em;
+	#form{
+		max-width: 300px;
+  		margin: 10px auto;
+  		padding: 10px 20px;
+  		background: #e4e4e4;
+  		border-radius: 8px;
+		  @include mixins.bp-medium{
+			max-width: 500px;
+		  }
+	}
+	h1{
+		font-size: 2em;
+		font-weight: 700;
+		text-align: center;
+		margin-top: .5em;
+	}
+	fieldset{
+		margin-top: 2em;
+		display: flex;
+		flex-direction: column;
+		align-items: left;
+		padding: 2em;
+		
+
+		legend{
+			font-size: 1.25em;
+			font-weight: 600;
+		}
+		
+		.information{
+			text-align: center;
+		}
+		label{
+			margin-bottom: .5em;
+			margin-top: .5em;
+			font-size: 1.25em;
+		}
+		// .inline{
+		// 	display: inline;
+		// }
+		.radio-btns{
+			display: flex;
+			flex-direction: column;
+			vertical-align: left;
+			span{
+				color: rgb(74, 73, 73);
+				font-size: 16px;
+			}
+		}
+		.check-box{
+			display: flex;
+			flex-direction: column;
+		}
+		// .inline{
+			
+		// }
+	}
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	textarea, select{
+		background: rgba(255,255,255,0.1);
+  		border: none;
+  		font-size: 16px;
+  		height: auto;
+  		margin: 0;
+  		outline: 0;
+  		padding: .5em;
+  		width: 100%;
+  		background-color: #ffffff;
+  		color: #8a97a0;
+  		box-shadow: 0 1px 0 rgba(0,0,0,0.03)
+	}
+	.login{
+		margin-top: 1em;
+	}
+	.btn{
+		margin-top: 1em;
+	}
+
+}
+.accordian-item{
+	text-align: center;
+	background-color: transparent;
+	
+	// display: flex;
+	button{
+	width: 30%;
+	// flex-grow: 1;
+	background: black;
+	color: white;
+	border-radius: 50px;
+	border: 2px solid transparent;
+	padding: .7em 1.5em .7em 1.5em;
+	text-align: center;
+	font-size: 1em;
+	@include mixins.bp-medium{
+		width: 20%;
+	}
+	
+
+	transition: all 0.2s ease-in-out;
+	cursor: pointer;
+	&:after {
+		content: "+";
+		float: right;
+		right: 0;
+		
+	  }
+	  &.active,
+    	&:hover {
+      background-color: grey;
+    }
+	&.active {
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+		&:after {
+			content: "-";
+		  }
+	
+	}
+	
+
+}
+.accordian-content{
+	overflow: hidden;
+	max-height: 0;
+	transition: all 0.4s ease-in-out;
+	// display: none;
+	&.active {
+		display: block;
+	  }
+}
+
+
 }

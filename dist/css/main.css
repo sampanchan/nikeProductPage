@@ -198,6 +198,24 @@ div.loading.hide {
   opacity: 0;
 }
 
+.main-content-link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: black;
+  padding: 0.5em;
+  border-radius: 5px;
+  margin-top: 1em;
+  font-size: 10px;
+  position: absolute;
+  top: -1%;
+  left: 1%;
+}
+.main-content-link:hover {
+  background: #0c5a96;
+  color: white;
+}
+
 header {
   background: white;
   width: 100%;
@@ -301,7 +319,8 @@ header .nike-header-menu nav ul {
     flex-direction: row;
     text-align: center;
     margin-top: 0;
-    margin-left: 0;
+    margin-left: -4em;
+    align-items: center;
   }
 }
 header .nike-header-menu nav ul > li {
@@ -324,7 +343,7 @@ header .nike-header-menu nav ul > li a:hover {
 }
 @media screen and (min-width: 768px) {
   header .nike-header-menu nav ul > li a {
-    font-size: 1.1em;
+    font-size: 1em;
     margin-right: 1em;
   }
 }
@@ -1478,8 +1497,7 @@ header .nike-header-menu #nike-header-menu:checked ~ nav {
   font-size: 1em;
 }
 .btn:hover {
-  opacity: 50%;
-  border: solid black 2px;
+  background: #0c5a96;
   transition: 0.2s ease-in-out;
 }
 
@@ -1497,9 +1515,9 @@ header .nike-header-menu #nike-header-menu:checked ~ nav {
       justify-self: center;
 }
 .btn-secondary:hover {
-  opacity: 60%;
-  border: 2px solid transparent;
+  background: black;
   transition: 0.2s ease-in-out;
+  color: white;
 }
 
 footer {
@@ -1535,9 +1553,6 @@ footer .external-links li a:hover {
   footer .external-links .flex-links {
     justify-content: center;
   }
-}
-footer .external-links .flex-links span {
-  color: white;
 }
 footer .social-media {
   display: flex;
@@ -1608,5 +1623,126 @@ footer .location-copyright .terms-links li a {
 footer .location-copyright .terms-links li a:hover {
   opacity: 60%;
   transition: 0.2s ease-in-out;
+}
+
+.sign-up-main {
+  margin-bottom: 2em;
+}
+.sign-up-main #form {
+  max-width: 300px;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background: #e4e4e4;
+  border-radius: 8px;
+}
+@media screen and (min-width: 768px) {
+  .sign-up-main #form {
+    max-width: 500px;
+  }
+}
+.sign-up-main h1 {
+  font-size: 2em;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 0.5em;
+}
+.sign-up-main fieldset {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding: 2em;
+}
+.sign-up-main fieldset legend {
+  font-size: 1.25em;
+  font-weight: 600;
+}
+.sign-up-main fieldset .information {
+  text-align: center;
+}
+.sign-up-main fieldset label {
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+  font-size: 1.25em;
+}
+.sign-up-main fieldset .radio-btns {
+  display: flex;
+  flex-direction: column;
+  vertical-align: left;
+}
+.sign-up-main fieldset .radio-btns span {
+  color: #4a4949;
+  font-size: 16px;
+}
+.sign-up-main fieldset .check-box {
+  display: flex;
+  flex-direction: column;
+}
+.sign-up-main input[type=text],
+.sign-up-main input[type=password],
+.sign-up-main input[type=email],
+.sign-up-main textarea, .sign-up-main select {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  font-size: 16px;
+  height: auto;
+  margin: 0;
+  outline: 0;
+  padding: 0.5em;
+  width: 100%;
+  background-color: #ffffff;
+  color: #8a97a0;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03);
+}
+.sign-up-main .login {
+  margin-top: 1em;
+}
+.sign-up-main .btn {
+  margin-top: 1em;
+}
+
+.accordian-item {
+  text-align: center;
+  background-color: transparent;
+}
+.accordian-item button {
+  width: 30%;
+  background: black;
+  color: white;
+  border-radius: 50px;
+  border: 2px solid transparent;
+  padding: 0.7em 1.5em 0.7em 1.5em;
+  text-align: center;
+  font-size: 1em;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .accordian-item button {
+    width: 20%;
+  }
+}
+.accordian-item button:after {
+  content: "+";
+  float: right;
+  right: 0;
+}
+.accordian-item button.active, .accordian-item button:hover {
+  background-color: grey;
+}
+.accordian-item button.active {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.accordian-item button.active:after {
+  content: "-";
+}
+.accordian-item .accordian-content {
+  overflow: hidden;
+  max-height: 0;
+  transition: all 0.4s ease-in-out;
+}
+.accordian-item .accordian-content.active {
+  display: block;
 }
 /*# sourceMappingURL=main.css.map */

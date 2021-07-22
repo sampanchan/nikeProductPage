@@ -1,0 +1,158 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <meta name="description" content="Nike delivers innovative products, experiences and service to inspire athletes. Workout, be active, just do it. " />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Khula:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" >
+		<link rel="stylesheet" href="dist/css/main.css" />
+</head>
+<body>
+    <a class="main-content-link" href="#main-content">Skip To Main Content</a>
+    <header class="nike-nav">
+        <a href="index.html">
+            <img src="/dist/img/nikeLogo.png" alt="nike logo" class="logo">
+        </a>
+        <div class="nike-header-menu">
+            <input type="checkbox" id="nike-header-menu" />
+
+            <div class="nike-header-icon-container">
+                <img src="/dist/img/shopping-bag.png" alt="shopping bag logo" class="icons">
+                <img src="/dist/img/search-interface-symbol.png" alt="search logo" class="icons">
+            </div>
+            
+            <label for="nike-header-menu" class="nike-menu">
+                <span></span>
+                <span></span>
+            </label>
+            
+            <nav>
+                <ul>
+                    <li><a href="#">New Releases</a></li>
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Kids</a></li>
+                    <li><a href="#">Customize</a></li>
+                    <li><a href="#">Sale</a></li>
+                    <li><a href="newLetter.html">News Letter</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="loading">
+        <img src="/dist/img/logo3.jpg" alt="nike loading logo">
+    </div>
+    <section class="sale-banner">
+        <div class="sale-banner-div">
+            <p>Free Shipping & 60 day Free Returns</p>
+            <p>Join Now</p>
+        </div>
+    </section>
+    <main class="sign-up-main" id="main-content">
+        <form action="#" method="post" id="form" aria-label="signup-form">
+            <h1>Sign Up</h1>
+            <fieldset class="sign-up fieldset">
+                <legend class="information">Information</legend>
+                <label for="first-name">First Name:</label>
+                    <input type="text" name="user_name" id="first-name">
+                <label for="last-name">Last Name: </label>
+                    <input type="text" name="user_last_name" id="last-name">
+                <label for="email">Email: </label>
+                    <input type="email" name="user_mail" id="mail">
+                <label for="email">Password: </label>
+                    <input type="password" name="user_password" id="password">
+                <div class="radio-btns">
+                    <label for="Age">Age: <span class="disclaimer">*under 16 needs parent permission</span> </label>
+                    <input type="radio" style="vertical-align: middle" name="user_age" value="16_18" id="16_18">
+                        <label for="16_18" class="inline">16-18</label> 
+                    <input type="radio" name="user_age" value="19_25" id="19_25">
+                        <label for="19_25" class="inline">19-25</label>
+                    <input type="radio" name="user_age" value="26_35" id="26_35">
+                        <label for="26_35" class="inline">26-35</label> 
+                    <input type="radio" name="user_age" value="35+" id="35+">
+                        <label for="35+" class="inline">35+</label>
+                </div>
+                <div class="check-box">       
+                    <input type="checkbox" name="news-letter" value="yes" id="yes">
+                    <label for="yes" class="inline">Yes, sign me up for Nike News</label>
+                    <input type="checkbox" name="news-letter" value="no" id="no">
+                    <label for="no" class="inline">No, don't sign me up.</label>
+                </div>
+                <button class="btn"> Sign Up</button>
+            </fieldset>
+           
+        </form>
+        <form action="#" method="post" id="form" aria-label="login">
+            <h1>Login</h1>
+            <fieldset class="login fieldset">
+                 
+                <label for="email">Email: </label>
+                    <input type="email" name="user_mail" id="mail">
+                <label for="email">Password: </label>
+                    <input type="password" name="user_password" id="password">
+                <button class="btn">Login</button>
+            </fieldset>
+        </form> 
+           <div class="accordian-item">
+                <button class="accordian-btn">Disclaimer</button>
+                <div class="accordian-content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam laborum veritatis mollitia ducimus illo dolorum culpa, delectus, ab id eveniet quo alias natus. Quos dolorum asperiores alias neque mollitia tempora!</p>
+                </div>
+           </div>
+    </main>
+    <footer class="nike-footer">
+        <div id="external-links">
+            <ul class="external-links">
+                <li><a href="">gift cards</a></li>
+                <li><a href="">promotions</a></li>
+                <li><a href="">find a store</a></li>
+                <li><a href="">sign up for email</a></li>
+                <li><a href="">become a member</a></li>
+                <li><a href="">nike journal</a></li>
+                <li><a href="">send feedback</a></li>
+            </ul>
+        </div>
+        <div id="external-links">
+            <ul class="external-links flex-links">
+                <div d="flex-links">
+                    <li><a href="">get help</a></li>  
+                </div>
+                <div id="flex-links">
+                    <li><a href="">about nike</a></li>
+                </div>
+            </ul>
+        </div>
+        <section class="social-media">
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-youtube"></i>
+            <i class="fab fa-instagram"></i>
+        </section>
+        <div class="location-copyright">
+            <div class="location">
+                <div>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>United States</p>
+                </div>
+                <p>&#169; 2021 Nike, Inc. All Rights Reserved</p>
+            </div>
+            <ul class="terms-links">
+                <li><a href="">Guides</a></li>
+                <li><a href="">Terms of Sale</a></li>
+                <li><a href="">Terms of Use</a></li>
+                <li><a href="">Nike Privacy Policy</a></li>
+                <li><a href="">CA Supply Chains Act</a></li>
+            </ul>
+        </div>
+        
+        
+    </footer>
+    <script src="dist/js/main.js"></script>
+</body>
+</html>
