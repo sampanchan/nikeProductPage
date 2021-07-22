@@ -1060,67 +1060,26 @@ footer{
 	.btn{
 		margin-top: 1em;
 	}
+	.check-box{
+		margin-top: 2em;
+	}
 
 }
-// .accordian-item{
-// 	text-align: center;
-// 	background-color: transparent;
-	
-// 	&__button{
-// 	width: 30%;
-// 	background: black;
-// 	color: white;
-// 	border-radius: 50px;
-// 	border: 2px solid transparent;
-// 	padding: .7em 1.5em .7em 1.5em;
-// 	text-align: center;
-// 	font-size: 1em;
-// 	@include mixins.bp-medium{
-// 		width: 20%;
-// 	}
-	
-// 	transition: all 0.2s ease-in-out;
-// 	cursor: pointer;
-// 	&::after {
-// 		content: "+";
-// 		float: right;
-// 		right: 0;
-		
-// 	  }
-// 	  &.active,
-//     	&:hover {
-//       background-color: grey;
-//     }
-// 	&.active {
-// 		border-bottom-left-radius: 0;
-// 		border-bottom-right-radius: 0;
-// 		&::after {
-// 			content: "-";
-// 		  }
-	
-// 	}
 
-// 	}
-// 	&__content{
-// 	overflow: hidden;
-// 	max-height: 0;
-// 	transition: all 0.4s ease-in-out;
-// 	// display: none;
-// 	&.active {
-// 		display: block;
-// 	  }
-// 	}
-
-
-// }
 .accordian-item {
 	background-color: transparent;
-	margin: 0 auto;
+	// margin: 0 auto;
+	button{
+		margin: 1em auto;
+		margin-bottom:1em;
+		
+	}
   
 	&__button{
+		
 	  border: 0;
 	  display: block;
-	  background: grey;
+	  background: rgb(0, 0, 0);
 	  width: 50%;
 	  color: white;
 	  text-align: left;
@@ -1129,11 +1088,12 @@ footer{
 	  padding: 1rem;
 	  border-radius: 6px;
 	  cursor: pointer;
+	  
   
 	  &:after {
 		content: "+";
 		float: right;
-		right: 0;
+		// right: 0;
 	  }
   
 	  &.active,
@@ -1142,22 +1102,33 @@ footer{
 	  }
   
 	  &.active {
-		border-bottom-left-radius: 0;
-		border-bottom-right-radius: 0;
+		// border-bottom-left-radius: 0;
+		// border-bottom-right-radius: 0;
+		border-radius: 5px;
   
 		&::after {
 		  content: "-";
 		}
 	  }
+	  @include mixins.bp-medium{
+		  width: 30%;
+	  }
 	}
   
 	&__content {
+		margin:1em auto;
 	  overflow: hidden;
 	  max-height: 0;
+	  width: 80%;
+	  text-align: center;
 	  transition: all 0.4s ease-in-out;
 	  background-color:transparent;
 	  border-bottom-left-radius: 6px;
 	  border-bottom-right-radius: 6px;
+	  background: whitesmoke;
+	  @include mixins.bp-medium{
+		width: 30%;
+	}
   
 	  &.active {
 		display: block;

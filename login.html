@@ -40,7 +40,7 @@
                     <li><a href="#">Kids</a></li>
                     <li><a href="#">Customize</a></li>
                     <li><a href="#">Sale</a></li>
-                    <li><a href="newLetter.html">News Letter</a></li>
+                    <li><a href="login.html">Sign Up/ Login</a></li>
                 </ul>
             </nav>
         </div>
@@ -56,7 +56,7 @@
     </section>
     <main class="sign-up-main" id="main-content">
         <form action="#" method="post" id="form" aria-label="signup-form">
-            <h1>Sign Up</h1>
+            <h1 for="form" aria-labelledby="sign-up">Sign Up</h1>
             <fieldset class="sign-up fieldset">
                 <legend class="information">Information</legend>
                 <label for="first-name">First Name:</label>
@@ -67,22 +67,34 @@
                     <input type="email" name="user_mail" id="mail">
                 <label for="email">Password: </label>
                     <input type="password" name="user_password" id="password">
-                <div class="radio-btns">
-                    <label for="Age">Age: <span class="disclaimer">*under 16 needs parent permission</span> </label>
-                    <input type="radio" style="vertical-align: middle" name="user_age" value="16_18" id="16_18">
+                <div class="radio-btns" id="age">
+                    <label for="Age" for="age"  aria-label="age">Age: <span class="disclaimer">*under 16 needs parent permission</span> </label>
+                    <div>
+                        <input type="radio" style="vertical-align: middle" name="user_age" value="16_18" id="16_18">
                         <label for="16_18" class="inline">16-18</label> 
-                    <input type="radio" name="user_age" value="19_25" id="19_25">
+                    </div>
+                    <div>
+                        <input type="radio" name="user_age" value="19_25" id="19_25">
                         <label for="19_25" class="inline">19-25</label>
-                    <input type="radio" name="user_age" value="26_35" id="26_35">
-                        <label for="26_35" class="inline">26-35</label> 
-                    <input type="radio" name="user_age" value="35+" id="35+">
+                    </div>
+                    <div>
+                        <input type="radio" name="user_age" value="26_35" id="26_35">
+                        <label for="26_35" class="inline">26-35</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="user_age" value="35+" id="35+">
                         <label for="35+" class="inline">35+</label>
+                    </div>  
                 </div>
-                <div class="check-box">       
-                    <input type="checkbox" name="news-letter" value="yes" id="yes">
-                    <label for="yes" class="inline">Yes, sign me up for Nike News</label>
-                    <input type="checkbox" name="news-letter" value="no" id="no">
-                    <label for="no" class="inline">No, don't sign me up.</label>
+                <div class="check-box"> 
+                    <div>
+                        <input type="checkbox" name="news-letter" value="yes" id="yes">
+                        <label for="yes" class="inline">Yes, sign me up for Nike News</label>
+                    </div>      
+                    <div>
+                        <input type="checkbox" name="news-letter" value="no" id="no">
+                        <label for="no" class="inline">No, don't sign me up.</label>
+                    </div>
                 </div>
                 <button class="btn"> Sign Up</button>
             </fieldset>
@@ -101,8 +113,8 @@
         </form> 
            <div class="accordian-item">
                 <button class="accordian-item__button">Disclaimer</button>
-                <div class="accordian-item__content">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam laborum veritatis mollitia ducimus illo dolorum culpa, delectus, ab id eveniet quo alias natus. Quos dolorum asperiores alias neque mollitia tempora!</p>
+                <div class="accordian-item__content" id="disclaimer-content" aria-labelledby="disclaimer">
+                    <p for="disclaimer-content">Please be advised that it is not Nike's responsibility that any persons that sign up whether it is under 16 years of age or over.</p>
                 </div>
            </div>
     </main>

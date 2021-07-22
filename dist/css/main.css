@@ -1702,15 +1702,21 @@ footer .location-copyright .terms-links li a:hover {
 .sign-up-main .btn {
   margin-top: 1em;
 }
+.sign-up-main .check-box {
+  margin-top: 2em;
+}
 
 .accordian-item {
   background-color: transparent;
-  margin: 0 auto;
+}
+.accordian-item button {
+  margin: 1em auto;
+  margin-bottom: 1em;
 }
 .accordian-item__button {
   border: 0;
   display: block;
-  background: grey;
+  background: black;
   width: 50%;
   color: white;
   text-align: left;
@@ -1723,25 +1729,37 @@ footer .location-copyright .terms-links li a:hover {
 .accordian-item__button:after {
   content: "+";
   float: right;
-  right: 0;
 }
 .accordian-item__button.active, .accordian-item__button:hover {
   background-color: grey;
 }
 .accordian-item__button.active {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+  border-radius: 5px;
 }
 .accordian-item__button.active::after {
   content: "-";
 }
+@media screen and (min-width: 768px) {
+  .accordian-item__button {
+    width: 30%;
+  }
+}
 .accordian-item__content {
+  margin: 1em auto;
   overflow: hidden;
   max-height: 0;
+  width: 80%;
+  text-align: center;
   transition: all 0.4s ease-in-out;
   background-color: transparent;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
+  background: whitesmoke;
+}
+@media screen and (min-width: 768px) {
+  .accordian-item__content {
+    width: 30%;
+  }
 }
 .accordian-item__content.active {
   display: block;
