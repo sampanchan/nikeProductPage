@@ -408,7 +408,8 @@ header .nike-header-menu #nike-header-menu:checked ~ nav {
 }
 .nike-main .nike-title > span {
   font-weight: 400;
-  margin: 2em;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
 }
 @media screen and (min-width: 992px) {
   .nike-main .nike-title > span {
@@ -1627,6 +1628,7 @@ footer .location-copyright .terms-links li a:hover {
 
 .sign-up-main {
   margin-bottom: 2em;
+  margin: 0 auto;
 }
 .sign-up-main #form {
   max-width: 300px;
@@ -1702,47 +1704,49 @@ footer .location-copyright .terms-links li a:hover {
 }
 
 .accordian-item {
-  text-align: center;
   background-color: transparent;
+  margin: 0 auto;
 }
-.accordian-item button {
-  width: 30%;
-  background: black;
+.accordian-item__button {
+  border: 0;
+  display: block;
+  background: grey;
+  width: 50%;
   color: white;
-  border-radius: 50px;
-  border: 2px solid transparent;
-  padding: 0.7em 1.5em 0.7em 1.5em;
-  text-align: center;
-  font-size: 1em;
+  text-align: left;
+  font-size: 16px;
   transition: all 0.2s ease-in-out;
+  padding: 1rem;
+  border-radius: 6px;
   cursor: pointer;
 }
-@media screen and (min-width: 768px) {
-  .accordian-item button {
-    width: 20%;
-  }
-}
-.accordian-item button::after {
+.accordian-item__button:after {
   content: "+";
   float: right;
   right: 0;
 }
-.accordian-item button.active, .accordian-item button:hover {
+.accordian-item__button.active, .accordian-item__button:hover {
   background-color: grey;
 }
-.accordian-item button.active {
+.accordian-item__button.active {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
-.accordian-item button.active::after {
+.accordian-item__button.active::after {
   content: "-";
 }
-.accordian-item .accordian-content {
+.accordian-item__content {
   overflow: hidden;
   max-height: 0;
   transition: all 0.4s ease-in-out;
+  background-color: transparent;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
-.accordian-item .accordian-content.active {
+.accordian-item__content.active {
   display: block;
+}
+.accordian-item__content p {
+  padding: 1rem;
 }
 /*# sourceMappingURL=main.css.map */
