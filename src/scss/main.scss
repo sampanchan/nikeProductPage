@@ -1079,7 +1079,7 @@ footer{
 	
 	transition: all 0.2s ease-in-out;
 	cursor: pointer;
-	&:after {
+	&::after {
 		content: "+";
 		float: right;
 		right: 0;
@@ -1092,7 +1092,7 @@ footer{
 	&.active {
 		border-bottom-left-radius: 0;
 		border-bottom-right-radius: 0;
-		&:after {
+		&::after {
 			content: "-";
 		  }
 	

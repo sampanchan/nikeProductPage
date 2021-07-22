@@ -1722,7 +1722,7 @@ footer .location-copyright .terms-links li a:hover {
     width: 20%;
   }
 }
-.accordian-item button:after {
+.accordian-item button::after {
   content: "+";
   float: right;
   right: 0;
@@ -1734,7 +1734,7 @@ footer .location-copyright .terms-links li a:hover {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
-.accordian-item button.active:after {
+.accordian-item button.active::after {
   content: "-";
 }
 .accordian-item .accordian-content {
