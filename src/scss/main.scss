@@ -36,11 +36,8 @@ background: variables.$primary-color;
 body {
 	background: rgb(254, 254, 254);
 	margin: 0;
-	font-family: 'Khula', sans-serif;
-	
-	
+	font-family: "Khula", sans-serif;
 }
-
 
 /* 2. Content ================================= */
 
@@ -48,77 +45,70 @@ div.loading {
 	position: fixed;
 	height: 100vh;
 	width: 100vw;
-	background-color: white;;
+	background-color: white;
 	pointer-events: none;
 	z-index: 1000;
-	opacity: 1;;
+	opacity: 1;
 	transition: 2s;
-	img{
+	img {
 		position: absolute;
-		top:25%;
-		left:20%;
-		@include mixins.bp-medium{
-			top:30%;
-			left:20%;
+		top: 25%;
+		left: 20%;
+		@include mixins.bp-medium {
+			top: 30%;
+			left: 20%;
 		}
-		@include mixins.bp-large{
-			
-			left:40%;
+		@include mixins.bp-large {
+			left: 40%;
 		}
 	}
-
 
 	&.hide {
-		opacity: 0;;
-		
+		opacity: 0;
 	}
 }
-.main-content-link{
+.main-content-link {
 	color: white;
 	text-decoration: none;
 	font-weight: bold;
 	background-color: black;
-	padding: .5em;
+	padding: 0.5em;
 	border-radius: 5px;
 	margin-top: 1em;
 	font-size: 10px;
 	position: absolute;
-	top:-1%;
-	left:1%;
-	&:hover{
+	top: -1%;
+	left: 1%;
+	&:hover {
 		background: rgb(12, 90, 150);
 		color: white;
-
 	}
 }
 
-
-header{
+header {
 	background: white;
 	// margin: 0 auto;
 	// padding: 0;
 	width: 100%;
-	height:9vh;
+	height: 9vh;
 	// position: fixed;
-	
-	
-	.logo{
+
+	.logo {
 		max-width: 65px;
 		margin: 0 auto;
-		margin-left:10px ;
-		
+		margin-left: 10px;
 	}
-	.icons{
+	.icons {
 		max-width: 25px;
 		margin-top: 5px;
-		@include mixins.bp-medium{
-			margin-right:.5em ;
+		@include mixins.bp-medium {
+			margin-right: 0.5em;
 		}
 	}
 
+	.nike-header-menu {
+		// the hamburger and nav parent
 
-	.nike-header-menu{ // the hamburger and nav parent
-		
 		z-index: 99;
 		position: absolute;
 		top: 0%;
@@ -126,22 +116,21 @@ header{
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
-		.nike-header-icon-container{
+		.nike-header-icon-container {
 			z-index: 100;
 			margin: 5px;
-			.icons{
+			.icons {
 				margin-left: 10px;
 			}
-			
 		}
-		
-		#nike-header-menu{
+
+		#nike-header-menu {
 			display: none;
 		}
-			
+
 		label {
-			margin-top: .2em;
-			span{
+			margin-top: 0.2em;
+			span {
 				cursor: pointer;
 				display: block;
 				width: 40px;
@@ -151,12 +140,10 @@ header{
 				position: relative;
 				transform-origin: center center;
 				transition: transform 250ms ease;
-				margin:10px;
-				@include mixins.bp-medium{
+				margin: 10px;
+				@include mixins.bp-medium {
 					display: none;
 				}
-				
-
 			}
 		}
 		#nike-header-menu:checked ~ label {
@@ -165,17 +152,15 @@ header{
 
 				&:nth-of-type(1) {
 					top: 25%;
-					transform: rotate(-45deg);	
+					transform: rotate(-45deg);
 				}
 				&:nth-of-type(2) {
 					right: 0%;
-					transform: rotate(45deg);	
+					transform: rotate(45deg);
 				}
-				
 			}
-			
 		}
-		nav{
+		nav {
 			// display: none;
 			background: rgb(196, 229, 249);
 			position: absolute;
@@ -184,52 +169,47 @@ header{
 			width: 50vw;
 			z-index: -1;
 			height: 0vh;
-			transition:  .5s;
+			transition: 0.5s;
 			overflow: hidden;
-			@include mixins.bp-medium{
+			@include mixins.bp-medium {
 				overflow: visible;
 				top: 35%;
-    			right: 100%;
+				right: 100%;
 				width: 60vw;
 			}
 
-			ul{
+			ul {
 				list-style: none;
 				text-align: left;
 				margin-top: 5em;
 				margin-left: 2em;
-				@include mixins.bp-medium{
+				@include mixins.bp-medium {
 					display: flex;
-    				flex-direction: row;
+					flex-direction: row;
 					text-align: center;
 					margin-top: 0;
-					margin-left:-4em;;
+					margin-left: -4em;
 					align-items: center;
-					
-
 				}
-				>li{
+				> li {
 					margin-bottom: 2em;
-					a{
+					a {
 						color: black;
 						text-decoration: none;
 						font-weight: 600;
 						font-size: 1.5em;
-						&:hover{
+						&:hover {
 							color: white;
-							transition: ease-in-out .25s;
-							@include mixins.bp-medium{
-								
+							transition: ease-in-out 0.25s;
+							@include mixins.bp-medium {
 								color: rgb(130, 130, 130);
 							}
 						}
-						@include mixins.bp-medium{
+						@include mixins.bp-medium {
 							font-size: 1em;
 							margin-right: 1em;
-							
 						}
-						@include mixins.bp-large{
-							
+						@include mixins.bp-large {
 							margin-right: 2em;
 						}
 					}
@@ -241,12 +221,8 @@ header{
 			height: 100vh;
 		}
 	}
-
-
-	
-	
 }
-.sale-banner{
+.sale-banner {
 	background-color: rgb(222, 222, 222);
 	// position: fixed;
 	width: 100%;
@@ -257,157 +233,153 @@ header{
 	justify-content: center;
 	align-items: center;
 	// top:100%;
-	.sale-banner-div{
-		
-		>p{
+	.sale-banner-div {
+		> p {
 			font-size: 13px;
 			margin: 0;
-			&:nth-child(1){
+			&:nth-child(1) {
 				font-weight: bold;
 			}
-			&:nth-child(2){
+			&:nth-child(2) {
 				text-decoration: underline;
 				font-weight: 400;
 			}
 		}
 	}
 }
-.nike-main{
-	
-	.nike-title{
+.nike-main {
+	.nike-title {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		margin-left:20px ;
-		>h1{
+		margin-left: 20px;
+		> h1 {
 			text-transform: uppercase;
 			font-weight: 800;
 			font-size: 35px;
 			margin: 30px 0px 0px 0px;
-			@include mixins.bp-large{
+			@include mixins.bp-large {
 				font-size: 45px;
 			}
 		}
-		>h2{
+		> h2 {
 			font-weight: 800;
 			font-size: 28px;
 			align-items: center;
 			margin: 1.5em;
-			@include mixins.bp-large{
+			@include mixins.bp-large {
 				font-size: 35px;
 			}
 		}
-		>span{
+		> span {
 			font-weight: 400;
 			margin: 2em;
-			@include mixins.bp-large{
+			@include mixins.bp-large {
 				font-size: 20px;
 			}
-		}	
+		}
 	}
-	.nike-grid{
+	.nike-grid {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr 1fr;
 		column-gap: 5px;
 		row-gap: 5px;
 		position: relative;
-		@include mixins.bp-large{
+		@include mixins.bp-large {
 			grid-template-columns: 1fr 1fr 1fr 1fr;
 			grid-template-rows: 1fr;
 		}
-		
-		.nike-image{
+
+		.nike-image {
 			justify-self: center;
 			background-size: cover;
-			background-repeat:none ;
+			background-repeat: none;
 			background-position-y: 60%;
 			width: 50vw;
 			height: 40vh;
-			@include mixins.bp-large{
+			@include mixins.bp-large {
 				width: 25vw;
 			}
 		}
-		.max-one{
+		.max-one {
 			// grid-column: 1;
 			background-image: url(/dist/img/nike1.jpg);
-			.btn-secondary{
-				@include mixins.bp-medium{
+			.btn-secondary {
+				@include mixins.bp-medium {
 					left: 15%;
 				}
-				@include mixins.bp-large{
+				@include mixins.bp-large {
 					left: 5%;
 					bottom: 5%;
 					// background-position-y: 20%;
 				}
-			}			
+			}
 		}
-		.max-two{
+		.max-two {
 			background-image: url(/dist/img/nike2.jpg);
 			background-position-x: 60%;
-			.btn-secondary{
+			.btn-secondary {
 				bottom: 50%;
 				right: -43%;
-				@include mixins.bp-medium{
+				@include mixins.bp-medium {
 					left: 15%;
 				}
-				@include mixins.bp-large{
+				@include mixins.bp-large {
 					left: -68%;
 					bottom: 5%;
 				}
 			}
 		}
-		.max-three{
+		.max-three {
 			background-image: url(/dist/img/nikeKids2.jpg);
 			background-position-x: 40%;
-			.btn-secondary{
+			.btn-secondary {
 				bottom: 0%;
 				left: 8%;
-				@include mixins.bp-medium{
+				@include mixins.bp-medium {
 					left: 15%;
 				}
-				@include mixins.bp-large{
+				@include mixins.bp-large {
 					left: 58%;
 					bottom: 5%;
 				}
 			}
 		}
-		.max-four{
+		.max-four {
 			background-image: url(/dist/img/nike3.jpg);
 			background-position-x: 40%;
-			.btn-secondary{
+			.btn-secondary {
 				bottom: 0%;
 				right: -43%;
-				@include mixins.bp-large{
+				@include mixins.bp-large {
 					left: 35%;
 					bottom: 5%;
 				}
 			}
 		}
-
-		
 	}
-	.featured-styles{
+	.featured-styles {
 		// margin:1em;
-		
-		.secondary-grid{
+
+		.secondary-grid {
 			position: relative;
 			display: grid;
 			grid-template-columns: 5px 1fr 5px;
 			grid-template-rows: 1fr 1fr;
-			@include mixins.bp-medium{
-				grid-template-columns:  1fr 1fr;
+			@include mixins.bp-medium {
+				grid-template-columns: 1fr 1fr;
 				grid-template-rows: 1fr;
 			}
-	
-			.style-one{
+
+			.style-one {
 				// margin:1em;
 				grid-column: 2;
 				grid-row: 1;
 				background-image: url(/dist/img/nike14.jpg);
 				width: 95vw;
 				height: 90vh;
-				@include mixins.bp-medium{
+				@include mixins.bp-medium {
 					grid-column: 2;
 					grid-row: 1;
 					width: 50vw;
@@ -415,13 +387,13 @@ header{
 					background-position-y: 70%;
 				}
 			}
-			.style-two{
+			.style-two {
 				grid-column: 2;
 				grid-row: 2;
 				background-image: url(/dist/img/nike15.jpg);
 				width: 95vw;
 				height: 90vh;
-				@include mixins.bp-medium{
+				@include mixins.bp-medium {
 					grid-column: 3;
 					grid-row: 1;
 					width: 50vw;
@@ -429,325 +401,307 @@ header{
 					background-position-y: 100%;
 				}
 			}
-			h4{
+			h4 {
 				position: absolute;
 				margin-left: 1em;
 				color: white;
-				font-size: 20px;	
+				font-size: 20px;
 			}
-			.outfit-essentials{
+			.outfit-essentials {
 				bottom: 58%;
-				@include mixins.bp-medium{
-					bottom: 15%;	
+				@include mixins.bp-medium {
+					bottom: 15%;
 				}
 			}
-			.be-different{
+			.be-different {
 				bottom: 8%;
-				@include mixins.bp-medium{
-					bottom: 15%;	
+				@include mixins.bp-medium {
+					bottom: 15%;
 				}
 			}
-			.btn{
+			.btn {
 				position: absolute;
 			}
-			#style-btn-one{
+			#style-btn-one {
 				bottom: 55%;
 				margin: -1em 1em;
-				@include mixins.bp-medium{
-					bottom: 8%;	
+				@include mixins.bp-medium {
+					bottom: 8%;
 				}
 			}
-			#style-btn-two{
+			#style-btn-two {
 				bottom: 5%;
 				margin: -1em 1em;
-				@include mixins.bp-medium{
-					bottom: 8%;	
+				@include mixins.bp-medium {
+					bottom: 8%;
 				}
 			}
-	
 		}
 	}
-	.nike-shoe-list{
-		
-		.tertiary-grid{
+	.nike-shoe-list {
+		.tertiary-grid {
 			display: grid;
 			grid-template-columns: 5px 1fr 1fr 1fr 1fr 5px;
 			grid-template-rows: 1fr 7em 1fr 7em 1fr 7em 1fr 7em;
-			@include mixins.bp-medium{
+			@include mixins.bp-medium {
 				grid-template-rows: 1fr 7em 1fr 7em;
 			}
-			@include mixins.bp-large{
+			@include mixins.bp-large {
 				grid-template-columns: 1fr 1fr 1fr 1fr;
 				grid-template-rows: 1fr 7em;
 			}
-			
+
 			// column-gap: 10px;
-			#shoe{
+			#shoe {
 				width: 95vw;
-				height:46vh;
+				height: 46vh;
 				background-position-x: 20%;
-				@include mixins.bp-medium{
+				@include mixins.bp-medium {
 					width: 49vw;
 					height: 45vh;
 				}
-				@include mixins.bp-large{
+				@include mixins.bp-large {
 					width: 25vw;
 				}
 			}
-			.shoe-description{
-				
+			.shoe-description {
 				justify-self: center;
 				text-align: center;
 				margin: 0;
-				>h5,p,span{
-					margin: .5em;
-					
+				> h5,
+				p,
+				span {
+					margin: 0.5em;
 				}
-				h5{
+				h5 {
 					font-size: 20px;
 				}
-				p{
+				p {
 					color: rgb(167, 167, 167);
 				}
-				span{
+				span {
 					font-weight: 700;
 				}
 			}
-			.shoe-one{
+			.shoe-one {
 				grid-column: 2/6;
 				grid-row: 1;
 				background-image: url(/dist/img/nike20.jpg);
-				@include mixins.bp-medium{
+				@include mixins.bp-medium {
 					grid-column: 2/3;
 				}
-				@include mixins.bp-large{
+				@include mixins.bp-large {
 					grid-column: 1/2;
 				}
-				
 			}
-			.shoe-two{
+			.shoe-two {
 				grid-column: 2/6;
 				grid-row: 3;
 				background-image: url(/dist/img/nike21.jpg);
-				@include mixins.bp-medium{
+				@include mixins.bp-medium {
 					grid-column: 4/5;
 					grid-row: 1;
 				}
-				@include mixins.bp-large{
+				@include mixins.bp-large {
 					grid-column: 2/3;
 				}
 			}
-			.shoe-three{
+			.shoe-three {
 				grid-column: 2/6;
 				grid-row: 5;
 				background-image: url(/dist/img/nike22.jpg);
-				@include mixins.bp-medium{
+				@include mixins.bp-medium {
 					grid-column: 2/3;
 					grid-row: 3;
 				}
-				@include mixins.bp-large{
+				@include mixins.bp-large {
 					grid-column: 3/4;
 					grid-row: 1;
 				}
 			}
-			.shoe-four{
+			.shoe-four {
 				grid-column: 2/6;
 				grid-row: 7;
 				background-image: url(/dist/img/nike23.jpg);
-				@include mixins.bp-medium{
+				@include mixins.bp-medium {
 					grid-column: 4/5;
 					grid-row: 3;
 				}
-				@include mixins.bp-large{
+				@include mixins.bp-large {
 					grid-column: 4/5;
 					grid-row: 1;
 				}
 			}
 
-			
-			.shoe-specs-one{
+			.shoe-specs-one {
 				grid-column: 2/6;
 				grid-row: 2;
-				@include mixins.bp-medium{
+				@include mixins.bp-medium {
 					grid-column: 2/3;
 					grid-row: 2;
 				}
-				@include mixins.bp-large{
+				@include mixins.bp-large {
 					grid-column: 1/2;
 					grid-row: 2;
 				}
 			}
-			.shoe-specs-two{
+			.shoe-specs-two {
 				grid-column: 2/6;
 				grid-row: 4;
-				@include mixins.bp-medium{
+				@include mixins.bp-medium {
 					grid-column: 4/5;
 					grid-row: 2;
 				}
-				@include mixins.bp-large{
+				@include mixins.bp-large {
 					grid-column: 2/3;
 					grid-row: 2;
 				}
-
-				
 			}
-			.shoe-specs-three{
+			.shoe-specs-three {
 				grid-column: 2/6;
 				grid-row: 6;
-				@include mixins.bp-medium{
+				@include mixins.bp-medium {
 					grid-column: 2/3;
 					grid-row: 4;
 				}
-				@include mixins.bp-large{
+				@include mixins.bp-large {
 					grid-column: 3/4;
 					grid-row: 2;
 				}
 			}
-			.shoe-specs-four{
+			.shoe-specs-four {
 				grid-column: 2/6;
 				grid-row: 8;
-				@include mixins.bp-medium{
+				@include mixins.bp-medium {
 					grid-column: 4/5;
 					grid-row: 4;
 				}
-				@include mixins.bp-large{
+				@include mixins.bp-large {
 					grid-column: 4/5;
 					grid-row: 2;
 				}
 			}
 		}
 	}
-	.sections{
-		
-		h3{
+	.sections {
+		h3 {
 			text-align: center;
 			font-size: 25px;
 			font-weight: 400;
 			margin: 2em;
 			// height: 20vh;
-			@include mixins.bp-large{
+			@include mixins.bp-large {
 				font-size: 30px;
 			}
 		}
-		
 	}
-	.trending{
-		.secondary-grid{
+	.trending {
+		.secondary-grid {
 			position: relative;
 			display: grid;
 			grid-template-columns: 5px 1fr 5px;
 			grid-template-rows: 1fr 1fr;
-			@include mixins.bp-medium{
-				grid-template-columns:  1fr 1fr;
+			@include mixins.bp-medium {
+				grid-template-columns: 1fr 1fr;
 				grid-template-rows: 1fr;
 			}
 
-			#trend{
+			#trend {
 				width: 95vw;
 				height: 90vh;
 				background-position-x: 20%;
-				@include mixins.bp-medium{
-				
+				@include mixins.bp-medium {
 					width: 50vw;
 					height: 65vh;
 				}
 			}
-			.trend-one{
+			.trend-one {
 				// margin:1em;
 				grid-column: 2;
 				grid-row: 1;
 				background-image: url(/dist/img/nike6.jpg);
-				@include mixins.bp-medium{
+				@include mixins.bp-medium {
 					grid-column: 2;
 					grid-row: 1;
-					
 				}
-				
 			}
-			.trend-two{
+			.trend-two {
 				grid-column: 2;
 				grid-row: 2;
 				background-image: url(/dist/img/nike7.jpg);
-				@include mixins.bp-medium{
+				@include mixins.bp-medium {
 					grid-column: 3;
 					grid-row: 1;
-					
 				}
-				
 			}
-			h4{
+			h4 {
 				position: absolute;
 				margin-left: 1em;
 				color: white;
-				font-size: 20px;	
+				font-size: 20px;
 			}
-			.new-trend{
+			.new-trend {
 				bottom: 58%;
-				@include mixins.bp-medium{
-					bottom: 15%;	
+				@include mixins.bp-medium {
+					bottom: 15%;
 				}
 			}
-			.shoe-trend{
+			.shoe-trend {
 				bottom: 8%;
-				@include mixins.bp-medium{
-					bottom: 15%;	
+				@include mixins.bp-medium {
+					bottom: 15%;
 				}
 			}
-			.btn{
+			.btn {
 				position: absolute;
-				
 			}
-			#style-btn-one{
+			#style-btn-one {
 				bottom: 55%;
 				margin: -1em;
-				@include mixins.bp-medium{
-					bottom: 8%;	
-					left:5%;
+				@include mixins.bp-medium {
+					bottom: 8%;
+					left: 5%;
 				}
 			}
-			#style-btn-two{
+			#style-btn-two {
 				bottom: 5%;
 				margin: -1em;
-				@include mixins.bp-medium{
+				@include mixins.bp-medium {
 					bottom: 8%;
-					left:55%;	
+					left: 55%;
 				}
 			}
 		}
-	
 	}
-	.member-benefits{
+	.member-benefits {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		margin: 0;
-		
-		
-		figure{
-			.secondary-grid{
+
+		figure {
+			.secondary-grid {
 				position: relative;
 				display: grid;
 				grid-template-columns: 5px 1fr 5px;
 				grid-template-rows: 1fr 10em;
-				@include mixins.bp-medium{
+				@include mixins.bp-medium {
 					grid-template-columns: 5px 1fr 1fr 5px;
-					grid-template-rows: 1fr ;
+					grid-template-rows: 1fr;
 				}
-				@include mixins.bp-large{
+				@include mixins.bp-large {
 					grid-template-columns: 5px 36em 5px;
-					grid-template-rows: 1fr ;
-					
+					grid-template-rows: 1fr;
 				}
 			}
-			.benefits-banner{
-				
-				img{
+			.benefits-banner {
+				img {
 					grid-column: 2;
 					max-width: 100vw;
-					@include mixins.bp-medium{
+					@include mixins.bp-medium {
 						max-width: 50vw;
 					}
-					@include mixins.bp-large{
+					@include mixins.bp-large {
 						max-width: 50vw;
 						grid-column: 2/3;
 						grid-row: 1;
@@ -755,139 +709,134 @@ header{
 					}
 				}
 			}
-			figcaption{
-				margin-left:1em;
+			figcaption {
+				margin-left: 1em;
 				grid-column: 2;
 				grid-row: 2;
 				align-self: center;
-				@include mixins.bp-medium{
+				@include mixins.bp-medium {
 					grid-column: 3;
 					grid-row: 1;
 					align-self: center;
 				}
-				@include mixins.bp-large{
+				@include mixins.bp-large {
 					grid-column: 2;
 					grid-row: 2;
 					align-self: center;
 				}
-				.member-btns{
+				.member-btns {
 					display: flex;
 					flex-direction: row;
 					justify-content: center;
-					
 				}
-				p{
+				p {
 					font-size: 18px;
 					font-weight: 400;
-					margin-top: .5em;
+					margin-top: 0.5em;
 					text-align: center;
 					overflow: hidden;
 					// font-family: 'Khula', sans-serif;
 				}
-				button{
-					margin:.5em;
+				button {
+					margin: 0.5em;
 				}
 			}
 		}
-		
 	}
-	.nike-links{
+	.nike-links {
 		margin-top: 2em;
-		ul{
+		ul {
 			list-style: none;
 			display: flex;
 			flex-direction: column;
 			margin: 0;
 			padding-left: 1em;
-			@include mixins.bp-medium{
+			@include mixins.bp-medium {
 				flex-direction: row;
 				justify-content: center;
 			}
-			li{
+			li {
 				margin-bottom: 1em;
-				a{
+				a {
 					color: black;
 					text-decoration: none;
 					font-weight: 600;
 					font-size: 20px;
-					@include mixins.bp-medium{
-						margin-right:2em;
+					@include mixins.bp-medium {
+						margin-right: 2em;
 					}
-					&:hover{
+					&:hover {
 						opacity: 60%;
-						transition: .2s ease-in-out;
+						transition: 0.2s ease-in-out;
 					}
 				}
 			}
 		}
 	}
 }
-.btn{
+.btn {
 	background: black;
 	color: white;
 	border-radius: 50px;
 	border: 2px solid transparent;
-	padding: .7em 1.5em .7em 1.5em;
+	padding: 0.7em 1.5em 0.7em 1.5em;
 	text-align: center;
 	font-size: 1em;
 	// width: 10%;
-	&:hover{
+	&:hover {
 		background: rgb(12, 90, 150);
 		// border:solid black 2px;
-		transition: .2s ease-in-out;
+		transition: 0.2s ease-in-out;
 	}
 }
-.btn-secondary{
+.btn-secondary {
 	position: absolute;
 	bottom: 50%;
-	left:8%;
+	left: 8%;
 	z-index: 2;
 	background: white;
-	
+
 	border: black solid 2px;
 	color: black;
 	margin: 10px auto;
 	text-align: center;
 	justify-self: center;
-	&:hover{
+	&:hover {
 		background: rgb(0, 0, 0);
 		// border: 2px solid transparent;
-		transition: .2s ease-in-out;
+		transition: 0.2s ease-in-out;
 		color: white;
 	}
 }
-footer{
+footer {
 	background: black;
-	
-	.external-links{
+
+	.external-links {
 		margin-top: 2em;
 		padding-top: 2em;
 		list-style: none;
 		margin: 0;
 		padding-left: 1em;
-		@include mixins.bp-medium{
+		@include mixins.bp-medium {
 			text-align: center;
 		}
-		
-		li{
-			margin: .5em;
-			
-			
-			a{
+
+		li {
+			margin: 0.5em;
+
+			a {
 				text-decoration: none;
 				color: white;
 				text-transform: uppercase;
 				font-weight: 700;
 				font-size: 12px;
-				&:hover{
+				&:hover {
 					opacity: 60%;
-					transition: .2s ease-in-out;
+					transition: 0.2s ease-in-out;
 				}
-				
 			}
-
 		}
-		
+
 		// .fas{
 		// 	color: white;
 		// 	margin-right:.5em ;
@@ -898,77 +847,72 @@ footer{
 		// .active{
 		// 	display: block;
 		// }
-		.flex-links{
+		.flex-links {
 			// text-align: center;
-			@include mixins.bp-medium{
+			@include mixins.bp-medium {
 				justify-content: center;
-			}	
+			}
 		}
-		
-		
 	}
-	.social-media{
+	.social-media {
 		display: flex;
 		flex-direction: row;
-		margin-left:.5em;
-		@include mixins.bp-medium{
+		margin-left: 0.5em;
+		@include mixins.bp-medium {
 			justify-content: center;
 		}
-		.fab{
-			margin: .5em;
-			color:rgb(110, 110, 110);
+		.fab {
+			margin: 0.5em;
+			color: rgb(110, 110, 110);
 			font-size: 1.5em;
-			&:hover{
+			&:hover {
 				color: white;
 			}
 		}
 	}
-	.location-copyright{
+	.location-copyright {
 		color: rgb(110, 110, 110);
-		@include mixins.bp-medium{
+		@include mixins.bp-medium {
 			text-align: center;
 		}
-		.location{
-			margin-top: .5em;
-			margin-left:1.5em;
-			>div{
+		.location {
+			margin-top: 0.5em;
+			margin-left: 1.5em;
+			> div {
 				display: flex;
 				flex-direction: row;
 				align-items: center;
 				color: white;
-				@include mixins.bp-medium{
+				@include mixins.bp-medium {
 					justify-content: center;
 				}
-				>.fas{
+				> .fas {
 					padding: 0;
-					margin-right:.5em;
-					
+					margin-right: 0.5em;
 				}
-				>p{
+				> p {
 					font-size: 10px;
-					margin-top: .5em;
+					margin-top: 0.5em;
 				}
 			}
-			p{
+			p {
 				font-size: 12px;
-				margin-top: .6em;
-				
+				margin-top: 0.6em;
 			}
-			
 		}
-		.terms-links{
+		.terms-links {
 			list-style: none;
 			margin: 0;
-			padding:1em;
-			li{
-				margin: .5em;
-				a{
+			padding: 1em;
+			li {
+				margin: 0.5em;
+				a {
 					text-decoration: none;
 					color: rgb(110, 110, 110);
 					font-size: 12px;
-					&:hover{
+					&:hover {
 						opacity: 60%;
-						transition: .2s ease-in-out;
+						transition: 0.2s ease-in-out;
 					}
 				}
 			}
@@ -977,137 +921,149 @@ footer{
 }
 
 // Sign In
-.sign-up-main{
+.sign-up-main {
 	margin-bottom: 2em;
-	#form{
+	#form {
 		max-width: 300px;
-  		margin: 10px auto;
-  		padding: 10px 20px;
-  		background: #e4e4e4;
-  		border-radius: 8px;
-		  @include mixins.bp-medium{
+		margin: 10px auto;
+		padding: 10px 20px;
+		background: #e4e4e4;
+		border-radius: 8px;
+		@include mixins.bp-medium {
 			max-width: 500px;
-		  }
+		}
 	}
-	h1{
+	h1 {
 		font-size: 2em;
 		font-weight: 700;
 		text-align: center;
-		margin-top: .5em;
+		margin-top: 0.5em;
 	}
-	fieldset{
+	fieldset {
 		margin-top: 2em;
 		display: flex;
 		flex-direction: column;
 		align-items: left;
 		padding: 2em;
-		
 
-		legend{
+		legend {
 			font-size: 1.25em;
 			font-weight: 600;
 		}
-		
-		.information{
+
+		.information {
 			text-align: center;
 		}
-		label{
-			margin-bottom: .5em;
-			margin-top: .5em;
+		label {
+			margin-bottom: 0.5em;
+			margin-top: 0.5em;
 			font-size: 1.25em;
 		}
 		// .inline{
 		// 	display: inline;
 		// }
-		.radio-btns{
+		.radio-btns {
 			display: flex;
 			flex-direction: column;
 			vertical-align: left;
-			span{
+			span {
 				color: rgb(74, 73, 73);
 				font-size: 16px;
 			}
 		}
-		.check-box{
+		.check-box {
 			display: flex;
 			flex-direction: column;
 		}
 		// .inline{
-			
+
 		// }
 	}
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
-	textarea, select{
-		background: rgba(255,255,255,0.1);
-  		border: none;
-  		font-size: 16px;
-  		height: auto;
-  		margin: 0;
-  		outline: 0;
-  		padding: .5em;
-  		width: 100%;
-  		background-color: #ffffff;
-  		color: #8a97a0;
-  		box-shadow: 0 1px 0 rgba(0,0,0,0.03)
+	textarea,
+	select {
+		background: rgba(255, 255, 255, 0.1);
+		border: none;
+		font-size: 16px;
+		height: auto;
+		margin: 0;
+		outline: 0;
+		padding: 0.5em;
+		width: 100%;
+		background-color: #ffffff;
+		color: #8a97a0;
+		box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03);
 	}
-	.login{
+	.login {
 		margin-top: 1em;
 	}
-	.btn{
+	.btn {
 		margin-top: 1em;
 	}
-
 }
-.accordian-item{
-	text-align: center;
-	background-color: transparent;
-	
-	button{
-	width: 30%;
-	background: black;
-	color: white;
-	border-radius: 50px;
-	border: 2px solid transparent;
-	padding: .7em 1.5em .7em 1.5em;
-	text-align: center;
-	font-size: 1em;
-	@include mixins.bp-medium{
-		width: 20%;
-	}
-	
-	transition: all 0.2s ease-in-out;
-	cursor: pointer;
-	&::after {
-		content: "+";
-		float: right;
-		right: 0;
-		
-	  }
-	  &.active,
-    	&:hover {
-      background-color: grey;
-    }
-	&.active {
-		border-bottom-left-radius: 0;
-		border-bottom-right-radius: 0;
-		&::after {
-			content: "-";
-		  }
-	
-	}
+// Added by Shelly //
+.accordion-item {
+	width: 40%;
+	// background: black;
+	margin: 0 auto;
+	border-radius: 15px;
 
-	}
-	.accordian-content{
-	overflow: hidden;
-	max-height: 0;
-	transition: all 0.4s ease-in-out;
-	// display: none;
-	&.active {
+	&__button {
+		border: 0;
 		display: block;
-	  }
+		background: black;
+		width: 100%;
+		color: white;
+		text-align: left;
+		font-size: 16px;
+		transition: all 0.2s ease-in-out;
+		padding: 1rem;
+		border-radius: 15px;
+		cursor: pointer;
+
+		&::after {
+			content: "+";
+			float: right;
+			right: 0;
+		}
+
+		&.active,
+		&:hover {
+			background-color: grey;
+		}
+
+		&.active {
+			border-bottom-left-radius: 0%;
+			border-bottom-right-radius: 0%;
+			border-top-left-radius: 15px;
+			border-top-right-radius: 15px;
+
+			&::after {
+				content: "-";
+			}
+		}
 	}
 
+	&__content {
+		overflow: hidden;
+		max-height: 0;
+		transition: all 0.4s ease-in-out;
+		background-color: transparent;
+		border-bottom-left-radius: 15px;
+		border-bottom-right-radius: 15px;
+		//   border-width: 2px;
+		//   border-style: solid;
+		//   border-right-color: black;
+		//   border-top-color: transparent;
 
+		&.active {
+			display: block;
+		}
+
+		p {
+			padding: 1rem;
+		}
+	}
 }
