@@ -1064,10 +1064,8 @@ footer{
 	text-align: center;
 	background-color: transparent;
 	
-	// display: flex;
 	button{
 	width: 30%;
-	// flex-grow: 1;
 	background: black;
 	color: white;
 	border-radius: 50px;
@@ -1079,7 +1077,6 @@ footer{
 		width: 20%;
 	}
 	
-
 	transition: all 0.2s ease-in-out;
 	cursor: pointer;
 	&:after {
@@ -1100,10 +1097,9 @@ footer{
 		  }
 	
 	}
-	
 
-}
-.accordian-content{
+	}
+	.accordian-content{
 	overflow: hidden;
 	max-height: 0;
 	transition: all 0.4s ease-in-out;
@@ -1111,7 +1107,7 @@ footer{
 	&.active {
 		display: block;
 	  }
-}
+	}
 
 
 }
