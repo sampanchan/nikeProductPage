@@ -1262,6 +1262,132 @@ footer .location-copyright .terms-links li a:hover {
   padding: 1rem;
 }
 
+.nike-filter-menu {
+  z-index: 99;
+  position: absolute;
+  top: 20%;
+  left: 0%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nike-filter-menu #nike-filter-menu {
+  display: none;
+}
+.nike-filter-menu label {
+  margin-top: 0.5em;
+  font-size: 1.5em;
+  display: flex;
+  margin-left: 1em;
+  flex-direction: column;
+  align-content: center;
+}
+@media screen and (min-width: 768px) {
+  .nike-filter-menu label {
+    display: none;
+  }
+}
+.nike-filter-menu label span {
+  cursor: pointer;
+  display: block;
+  width: 40px;
+  height: 3px;
+  border-radius: 15px;
+  background: #878787;
+  position: relative;
+  -ms-transform-origin: center center;
+      transform-origin: center center;
+  transition: transform 250ms ease;
+  margin: 10px;
+}
+@media screen and (min-width: 768px) {
+  .nike-filter-menu label span {
+    display: none;
+  }
+}
+.nike-filter-menu #nike-filter-menu:checked ~ label span {
+  background: black;
+  width: 30px;
+}
+.nike-filter-menu #nike-filter-menu:checked ~ label span:nth-of-type(1) {
+  top: 30%;
+  -ms-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+}
+.nike-filter-menu #nike-filter-menu:checked ~ label span:nth-of-type(2) {
+  right: -1%;
+  top: -11px;
+  -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+}
+.nike-filter-menu nav {
+  background: #e4e4e4;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50vw;
+  z-index: -1;
+  height: 0vh;
+  transition: 0.5s;
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .nike-filter-menu nav {
+    overflow: visible;
+    top: 35%;
+    right: 100%;
+    width: 60vw;
+  }
+}
+.nike-filter-menu nav ul {
+  list-style: none;
+  text-align: left;
+  margin-top: 5em;
+  margin-left: 2em;
+}
+@media screen and (min-width: 768px) {
+  .nike-filter-menu nav ul {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin-top: 0;
+    margin-left: -4em;
+    align-items: center;
+  }
+}
+.nike-filter-menu nav ul > li {
+  margin-bottom: 1em;
+}
+.nike-filter-menu nav ul > li a {
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1em;
+}
+.nike-filter-menu nav ul > li a:hover {
+  color: white;
+  transition: ease-in-out 0.25s;
+}
+@media screen and (min-width: 768px) {
+  .nike-filter-menu nav ul > li a:hover {
+    color: #828282;
+  }
+}
+@media screen and (min-width: 768px) {
+  .nike-filter-menu nav ul > li a {
+    font-size: 1em;
+    margin-right: 1em;
+  }
+}
+@media screen and (min-width: 992px) {
+  .nike-filter-menu nav ul > li a {
+    margin-right: 2em;
+  }
+}
+.nike-filter-menu #nike-filter-menu:checked ~ nav {
+  height: 100vh;
+}
+
 .new-releases__main {
   display: -ms-grid;
   display: grid;

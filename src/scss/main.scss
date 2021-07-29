@@ -1069,6 +1069,139 @@ footer{
 }
 
 //New Releases
+.nike-filter-menu{ // the hamburger and nav parent
+		
+	z-index: 99;
+	position: absolute;
+	top: 20%;
+    left: 0%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+		
+	
+	
+	#nike-filter-menu{
+		display: none;
+	}
+		
+	label {
+		margin-top: .5em;
+		font-size: 1.5em;
+		display: flex;
+		margin-left:1em;
+		flex-direction: column;
+		align-content: center;
+		@include mixins.bp-medium{
+			display: none;
+		}
+		
+	
+		span{
+			cursor: pointer;
+			display: block;
+			width: 40px;
+			height: 3px;
+			border-radius: 15px;
+			background: rgb(135, 135, 135);
+			position: relative;
+			transform-origin: center center;
+			transition: transform 250ms ease;
+			margin:10px;
+			@include mixins.bp-medium{
+				display: none;
+			}
+			
+
+		}
+	}
+	#nike-filter-menu:checked ~ label {
+		
+		span {
+			background: rgb(0, 0, 0);
+			width: 30px;
+
+			&:nth-of-type(1) {
+				top: 30%;
+				transform: rotate(-45deg);	
+			}
+			&:nth-of-type(2) {
+				right: -1%;
+    			top: -11px;
+				transform: rotate(45deg);	
+			}
+			
+		}
+		
+	}
+	nav{
+		// display: none;
+		background: rgb(228, 228, 228);
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 50vw;
+		z-index: -1;
+		height: 0vh;
+		transition:  .5s;
+		overflow: hidden;
+		@include mixins.bp-medium{
+			overflow: visible;
+			top: 35%;
+			right: 100%;
+			width: 60vw;
+		}
+
+		ul{
+			list-style: none;
+			text-align: left;
+			margin-top: 5em;
+			margin-left: 2em;
+			@include mixins.bp-medium{
+				display: flex;
+				flex-direction: row;
+				text-align: center;
+				margin-top: 0;
+				margin-left:-4em;;
+				align-items: center;
+				
+
+			}
+			>li{
+				margin-bottom: 1em;
+				a{
+					color: black;
+					text-decoration: none;
+					font-weight: 600;
+					font-size: 1em;
+					&:hover{
+						color: white;
+						transition: ease-in-out .25s;
+						@include mixins.bp-medium{
+							
+							color: rgb(130, 130, 130);
+						}
+					}
+					@include mixins.bp-medium{
+						font-size: 1em;
+						margin-right: 1em;
+						
+					}
+					@include mixins.bp-large{
+						
+						margin-right: 2em;
+					}
+				}
+			}
+		}
+	}
+	#nike-filter-menu:checked ~ nav {
+		// display: block;
+		height: 100vh;
+	}
+	
+}
+
 .new-releases__main{
 	display: grid;
 	grid-template-columns: 1fr;
