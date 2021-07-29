@@ -20,13 +20,7 @@
             <img src="/dist/img/nikeLogo.png" alt="nike logo" class="logo">
         </a>
         <div class="nike-header-menu">
-            <input type="checkbox" id="nike-header-menu" />
-
-            <div class="nike-header-icon-container">
-                <a href="#" aria-label="item-in-bag-icon"><img src="/dist/img/shopping-bag.png" alt="shopping bag logo" class="icons"> </a>
-				<a href="#" aria-label="search-icon"><img src="/dist/img/search-interface-symbol.png" alt="search logo" class="icons"></a> 
-            </div>
-            
+            <input type="checkbox" id="nike-header-menu" /> 
             <label for="nike-header-menu" class="nike-menu">
                 <span></span>
                 <span></span>
@@ -43,6 +37,10 @@
                     <li><a href="login.html">Sign Up/ Login</a></li>
                 </ul>
             </nav>
+            <div class="nike-header-icon-container">
+                <a href="#" aria-label="item-in-bag-icon"><img src="/dist/img/shopping-bag.png" alt="shopping bag logo" class="icons"> </a>
+				<a href="#" aria-label="search-icon"><img src="/dist/img/search-interface-symbol.png" alt="search logo" class="icons"></a> 
+            </div>
         </div>
     </header>
     <div class="loading">
@@ -113,9 +111,10 @@
             </fieldset>
         </form> 
            <div class="accordian-item">
+            <input  class="featured-style__input" type="button" name="ambient-colors" aria-label="content">
                 <button class="accordian-item__button">Disclaimer</button>
-                <div class="accordian-item__content" id="disclaimer-content" aria-labelledby="disclaimer">
-                    <p for="disclaimer-content">Please be advised that it is not Nike's responsibility that any persons that sign up whether it is under 16 years of age or over.</p>
+                <div class="accordian-item__content" id="disclaimer-content"  type="submit">
+                    <p for="disclaimer-content" aria-labelledby="disclaimer-content">Please be advised that it is not Nike's responsibility that any persons that sign up whether it is under 16 years of age or over.</p>
                 </div>
            </div>
     </main>
@@ -142,10 +141,12 @@
             </ul>
         </div>
         <section class="social-media">
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-facebook-f"></i>
-            <i class="fab fa-youtube"></i>
-            <i class="fab fa-instagram"></i>
+            <ul>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-facebook-f"></i> </a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i> </a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i> </a></li>
+            </ul>
         </section>
         <div class="location-copyright">
             <div class="location">

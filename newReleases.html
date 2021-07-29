@@ -20,10 +20,7 @@
 		<a href="index.html"> <img src="/dist/img/nikeLogo.png" alt="nike logo home button" class="logo"> </a>
 		<div class="nike-header-menu" aria-label="menu">
 			<input type="checkbox" id="nike-header-menu" />
-			<div class="nike-header-icon-container"> 
-				<a href="#" aria-label="item-in-bag-icon"><img src="/dist/img/shopping-bag.png" alt="shopping bag logo" class="icons"> </a>
-				<a href="#" aria-label="search-icon"><img src="/dist/img/search-interface-symbol.png" alt="search logo" class="icons"></a> 
-             </div>
+			
 			<label for="nike-header-menu" class="nike-menu" id="menu"> 
 				<span></span> 
 				<span></span> 
@@ -39,6 +36,10 @@
 					<li><a href="login.html">Sign Up/ Login</a></li>
 				</ul>
 			</nav>
+            <div class="nike-header-icon-container"> 
+				<a href="#" aria-label="item-in-bag-icon"><img src="/dist/img/shopping-bag.png" alt="shopping bag logo" class="icons"> </a>
+				<a href="#" aria-label="search-icon"><img src="/dist/img/search-interface-symbol.png" alt="search logo" class="icons"></a> 
+             </div>     
 		</div>
 	</header>
 	<section class="sale-banner">
@@ -47,17 +48,38 @@
 			<p>Join Now</p>
 		</div>
 	</section>
-    
-    <div class="nike-filter-menu" aria-label="menu">
+    <section class="filter-nav__second">
+
+		 <nav aria-label="filter-menu" for="filter-menu">
+            <ul>
+                <li><a href='#'>Shoes</a></li>
+                <li><a href="#">Sports Bras</a></li>
+                <li><a href="#">Bodysuits</a></li>
+                <li><a href="#">Tops & T-Shirts</a></li>
+                <li><a href="#">Hoodies & Pullovers</a></li>
+                <li><a href="#">Jackets & Vest</a></li>
+                <li><a href="#">Pants & Tights</a></li>
+                <li><a href="#">Shorts</a></li>
+                <li><a href="#">Compression & Baselayer</a></li>
+                <li><a href="#">Tracksuits</a></li>
+                <li><a href="#">Jumpsuits & Rompers</a></li>
+                <li><a href="#">Skirts & Dresses</a></li>
+                <li><a href="#">Swimwear</a></li>
+                <li><a href="#">Socks</a></li>
+                <li><a href="#">Accessories & Equipment</a></li>
+            </ul> 
+        </nav>
+	</section>
+    <aside class="nike-filter-menu" aria-label="menu">
         <input type="checkbox" id="nike-filter-menu" />
         
         <label for="nike-filter-menu" class="nike-menu" id="filter-menu"> 
-           Filter
+        Filter
             <div>
                 <span></span> 
                 <span></span>
             </div>
-             
+            
         </label>
         <nav aria-label="filter-menu" for="filter-menu">
             <ul>
@@ -78,11 +100,9 @@
                 <li><a href="#">Accessories & Equipment</a></li>
             </ul> 
         </nav>  
-    </div>
-        
-	<main class="new-releases__main">
-        
-        <!-- <div class="new-releases__section-shoe-list"> -->
+    </aside>
+	<main class="new-releases__main" id="main-content">  
+        <article class="new-product__container">    
             <figure class="new-product">
                 <a href="">
                     <img class="new-product__img" src="/dist/img/newRelease1.jpg" alt="nike-air-max-2021-womens-shoe-1-colors-160-dollars">
@@ -172,8 +192,8 @@
                 </figcaption>
             </figure>
             
-        <!-- </div> -->
-
+    <!-- </div> -->
+        </article>
     </main>
 	<footer class="nike-footer">
 		<div id="external-links">
@@ -195,7 +215,15 @@
 					<li><a href="">about nike</a></li> <span>+</span> </div>
 			</ul>
 		</div>
-		<section class="social-media"> <i class="fab fa-twitter"></i> <i class="fab fa-facebook-f"></i> <i class="fab fa-youtube"></i> <i class="fab fa-instagram"></i> </section>
+		<section class="social-media"> 
+            <ul>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-facebook-f"></i> </a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i> </a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i> </a></li>
+            </ul>
+            
+        </section>
 		<div class="location-copyright">
 			<div class="location">
 				<div> <i class="fas fa-map-marker-alt"></i>
