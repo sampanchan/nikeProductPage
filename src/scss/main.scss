@@ -85,9 +85,12 @@ div.loading {
 	position: absolute;
 	top:-1%;
 	left:1%;
+	opacity: 0;
+	transition: .5s;
 	&:hover{
 		background: rgb(12, 90, 150);
 		color: white;
+		opacity: 100;
 
 	}
 }
@@ -108,13 +111,17 @@ header{
 		margin-left:10px ;
 		
 	}
-	.icons{
-		max-width: 25px;
-		margin-top: 5px;
-		@include mixins.bp-medium{
-			margin-right:.5em ;
+	a{
+		text-decoration: none;
+		.icons{
+			max-width: 25px;
+			margin-top: 5px;
+			@include mixins.bp-medium{
+				margin-right:.5em ;
+			}
 		}
 	}
+	
 
 
 	.nike-header-menu{ // the hamburger and nav parent
@@ -388,39 +395,78 @@ header{
 
 		
 	}
-	.featured-styles{
+	.featured-style, .trending{
 		// margin:1em;
 		
-		.secondary-grid{
+		&__secondary-grid{
 			position: relative;
 			display: grid;
 			grid-template-columns: 5px 1fr 5px;
 			grid-template-rows: 1fr 1fr;
+			grid-row-gap:1em ;
 			@include mixins.bp-medium{
-				grid-template-columns:  1fr 1fr;
-				grid-template-rows: 1fr;
+				grid-template-columns:  1fr .4em 1fr;;
+				grid-template-rows: 1fr; 
+				grid-row-gap:0em ;
 			}
-	
-			.style-one{
-				// margin:1em;
+			// &__container{
+				
+			// 	&__btn{
+			// 		color: white;
+			// 	}
+			// 	&__input{
+			// 		display: none;
+			// 	}
+					
+			// }
+			h4{
+				position: absolute;
+				margin-left: 1em;
+				color: white;
+				font-size: 20px;	
+			}
+			button{
+				position: absolute;
+			}
+			input{
+				display: none;
+			}
+			#outfit-essentials{
 				grid-column: 2;
 				grid-row: 1;
 				background-image: url(/dist/img/nike14.jpg);
-				width: 95vw;
+				background-size: cover;
+				background-repeat: no-repeat;
+				width: 97vw;
 				height: 90vh;
 				@include mixins.bp-medium{
-					grid-column: 2;
+					grid-column: 1;
 					grid-row: 1;
 					width: 50vw;
 					height: 65vh;
 					background-position-y: 70%;
 				}
 			}
-			.style-two{
+			#outfit-essentials-header{
+				bottom: 58%;
+				@include mixins.bp-medium{
+					bottom: 15%;	
+				}
+			}
+			#outfit-essentials-btn{
+				bottom: 55%;
+				margin: -1em 1em;
+				@include mixins.bp-medium{
+					bottom: 8%;	
+				}
+			}
+			#ambient-colors{
 				grid-column: 2;
 				grid-row: 2;
 				background-image: url(/dist/img/nike15.jpg);
-				width: 95vw;
+				background-size: cover;
+				background-repeat: no-repeat;
+				width: 97vw;
 				height: 90vh;
 				@include mixins.bp-medium{
 					grid-column: 3;
@@ -430,41 +476,83 @@ header{
 					background-position-y: 100%;
 				}
 			}
-			h4{
-				position: absolute;
-				margin-left: 1em;
-				color: white;
-				font-size: 20px;	
-			}
-			.outfit-essentials{
-				bottom: 58%;
-				@include mixins.bp-medium{
-					bottom: 15%;	
-				}
-			}
-			.be-different{
+			#ambient-colors-header{
 				bottom: 8%;
 				@include mixins.bp-medium{
 					bottom: 15%;	
 				}
 			}
-			.btn{
-				position: absolute;
-			}
-			#style-btn-one{
-				bottom: 55%;
-				margin: -1em 1em;
-				@include mixins.bp-medium{
-					bottom: 8%;	
-				}
-			}
-			#style-btn-two{
+			#ambient-colors-btn{
 				bottom: 5%;
 				margin: -1em 1em;
 				@include mixins.bp-medium{
 					bottom: 8%;	
 				}
 			}
+			#athlete-styles{
+				grid-column: 2;
+				grid-row: 1;
+				background-image: url(/dist/img/nike6.jpg);
+				background-size: cover;
+				background-repeat: no-repeat;
+				width: 97vw;
+				height: 90vh;
+				background-position-x: 20%;
+				@include mixins.bp-medium{
+					grid-column: 1;
+					grid-row: 1;
+					width: 50vw;
+					height: 65vh;
+					
+				}
+			}
+			#athlete-styles-header{
+				bottom: 58%;
+				@include mixins.bp-medium{
+					bottom: 15%;	
+				}
+			}
+			#athlete-styles-btn{
+				bottom: 53%;
+				left:5%;
+				@include mixins.bp-medium{
+					bottom: 5%;	
+					left:2%;
+				}
+			}
+			#gym-outfits{
+				grid-column: 2;
+				grid-row: 2;
+				background-image: url(/dist/img/nike7.jpg);
+				background-size: cover;
+				background-repeat: no-repeat;
+				width: 97vw;
+				height: 90vh;
+				background-position-x: 20%;
+				@include mixins.bp-medium{
+					grid-column: 3;
+					grid-row: 1;
+					width: 50vw;
+					height: 65vh;
+					
+				}
+			}
+			#gym-outfits-header{
+				bottom: 8%;
+				@include mixins.bp-medium{
+					bottom: 15%;	
+				}
+			}
+			#gym-outfits-btn{
+				bottom: 3%;
+				left:5%;
+				@include mixins.bp-medium{
+					bottom: 5%;
+					left:52%;	
+				}
+			}
+
+
 	
 		}
 	}
@@ -472,151 +560,56 @@ header{
 		
 		.tertiary-grid{
 			display: grid;
-			grid-template-columns: 5px 1fr 1fr 1fr 1fr 5px;
-			grid-template-rows: 1fr 7em 1fr 7em 1fr 7em 1fr 7em;
+			// grid-template-columns: 5px 1fr 1fr 1fr 1fr 5px;
+			// grid-template-rows: 1fr 7em 1fr 7em 1fr 7em 1fr 7em;
+			grid-template-columns: 1fr;
+			grid-template-rows: 1fr 1fr 1fr 1fr;
 			@include mixins.bp-medium{
-				grid-template-rows: 1fr 7em 1fr 7em;
+				grid-template-columns: 1fr 1fr;
+				grid-template-rows: 1fr 1fr;
 			}
 			@include mixins.bp-large{
 				grid-template-columns: 1fr 1fr 1fr 1fr;
-				grid-template-rows: 1fr 7em;
+				grid-template-rows: 1fr;
 			}
+
 			
-			// column-gap: 10px;
-			#shoe{
-				width: 95vw;
-				height:46vh;
-				background-position-x: 20%;
-				@include mixins.bp-medium{
-					width: 49vw;
-					height: 45vh;
+			.product-shoe{
+
+				&__img{
+					width: 100vw;
+					cursor: pointer;
+					@include mixins.bp-medium{
+						width:50vw;
+					}
+					@include mixins.bp-large{
+						width:25vw;
+					}
 				}
-				@include mixins.bp-large{
-					width: 25vw;
-				}
-			}
-			.shoe-description{
-				
-				justify-self: center;
-				text-align: center;
-				margin: 0;
-				>h5,p,span{
-					margin: .5em;
+				&__title{
+					margin-top: 1em;
+					font-size: 1.2em;
+					font-display: flex;
+					flex-direction: column;
+					text-align: center;
+					font-weight: bold;
+					
 					
 				}
-				h5{
-					font-size: 20px;
+				&__description{
+					color: grey;
+					margin:.5em;
+					font-weight: normal;
 				}
-				p{
-					color: rgb(167, 167, 167);
-				}
-				span{
-					font-weight: 700;
-				}
-			}
-			.shoe-one{
-				grid-column: 2/6;
-				grid-row: 1;
-				background-image: url(/dist/img/nike20.jpg);
-				@include mixins.bp-medium{
-					grid-column: 2/3;
-				}
-				@include mixins.bp-large{
-					grid-column: 1/2;
+				&__price{
+					font-weight: bold;
+					// margin-bottom: ;
 				}
 				
-			}
-			.shoe-two{
-				grid-column: 2/6;
-				grid-row: 3;
-				background-image: url(/dist/img/nike21.jpg);
-				@include mixins.bp-medium{
-					grid-column: 4/5;
-					grid-row: 1;
-				}
-				@include mixins.bp-large{
-					grid-column: 2/3;
-				}
-			}
-			.shoe-three{
-				grid-column: 2/6;
-				grid-row: 5;
-				background-image: url(/dist/img/nike22.jpg);
-				@include mixins.bp-medium{
-					grid-column: 2/3;
-					grid-row: 3;
-				}
-				@include mixins.bp-large{
-					grid-column: 3/4;
-					grid-row: 1;
-				}
-			}
-			.shoe-four{
-				grid-column: 2/6;
-				grid-row: 7;
-				background-image: url(/dist/img/nike23.jpg);
-				@include mixins.bp-medium{
-					grid-column: 4/5;
-					grid-row: 3;
-				}
-				@include mixins.bp-large{
-					grid-column: 4/5;
-					grid-row: 1;
-				}
-			}
-
-			
-			.shoe-specs-one{
-				grid-column: 2/6;
-				grid-row: 2;
-				@include mixins.bp-medium{
-					grid-column: 2/3;
-					grid-row: 2;
-				}
-				@include mixins.bp-large{
-					grid-column: 1/2;
-					grid-row: 2;
-				}
-			}
-			.shoe-specs-two{
-				grid-column: 2/6;
-				grid-row: 4;
-				@include mixins.bp-medium{
-					grid-column: 4/5;
-					grid-row: 2;
-				}
-				@include mixins.bp-large{
-					grid-column: 2/3;
-					grid-row: 2;
-				}
-
 				
-			}
-			.shoe-specs-three{
-				grid-column: 2/6;
-				grid-row: 6;
-				@include mixins.bp-medium{
-					grid-column: 2/3;
-					grid-row: 4;
-				}
-				@include mixins.bp-large{
-					grid-column: 3/4;
-					grid-row: 2;
-				}
-			}
-			.shoe-specs-four{
-				grid-column: 2/6;
-				grid-row: 8;
-				@include mixins.bp-medium{
-					grid-column: 4/5;
-					grid-row: 4;
-				}
-				@include mixins.bp-large{
-					grid-column: 4/5;
-					grid-row: 2;
-				}
 			}
 		}
+		
 	}
 	.sections{
 		
@@ -632,165 +625,99 @@ header{
 		}
 		
 	}
-	.trending{
-		.secondary-grid{
-			position: relative;
-			display: grid;
-			grid-template-columns: 5px 1fr 5px;
-			grid-template-rows: 1fr 1fr;
-			@include mixins.bp-medium{
-				grid-template-columns:  1fr 1fr;
-				grid-template-rows: 1fr;
-			}
-
-			#trend{
-				width: 95vw;
-				height: 90vh;
-				background-position-x: 20%;
-				@include mixins.bp-medium{
-				
-					width: 50vw;
-					height: 65vh;
-				}
-			}
-			.trend-one{
-				// margin:1em;
-				grid-column: 2;
-				grid-row: 1;
-				background-image: url(/dist/img/nike6.jpg);
-				@include mixins.bp-medium{
-					grid-column: 2;
-					grid-row: 1;
-					
-				}
-				
-			}
-			.trend-two{
-				grid-column: 2;
-				grid-row: 2;
-				background-image: url(/dist/img/nike7.jpg);
-				@include mixins.bp-medium{
-					grid-column: 3;
-					grid-row: 1;
-					
-				}
-				
-			}
-			h4{
-				position: absolute;
-				margin-left: 1em;
-				color: white;
-				font-size: 20px;	
-			}
-			.new-trend{
-				bottom: 58%;
-				@include mixins.bp-medium{
-					bottom: 15%;	
-				}
-			}
-			.shoe-trend{
-				bottom: 8%;
-				@include mixins.bp-medium{
-					bottom: 15%;	
-				}
-			}
-			.btn{
-				position: absolute;
-				
-			}
-			#style-btn-one{
-				bottom: 55%;
-				margin: -1em;
-				@include mixins.bp-medium{
-					bottom: 8%;	
-					left:5%;
-				}
-			}
-			#style-btn-two{
-				bottom: 5%;
-				margin: -1em;
-				@include mixins.bp-medium{
-					bottom: 8%;
-					left:55%;	
-				}
-			}
-		}
 	
-	}
 	.member-benefits{
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		margin: 0;
+		cursor: pointer;
 		
-		
-		figure{
-			.secondary-grid{
-				position: relative;
-				display: grid;
-				grid-template-columns: 5px 1fr 5px;
-				grid-template-rows: 1fr 10em;
-				@include mixins.bp-medium{
-					grid-template-columns: 5px 1fr 1fr 5px;
-					grid-template-rows: 1fr ;
-				}
-				@include mixins.bp-large{
-					grid-template-columns: 5px 36em 5px;
-					grid-template-rows: 1fr ;
-					
-				}
-			}
-			.benefits-banner{
-				
+		a{
+			text-decoration: none;
+			color: black;
+			text-align: center;
+			font-size: 1.2em;
+			
+			
+			&__figure{
 				img{
+					width:100vw;
+				}
+				
+				// .secondary-grid{
+				// 	position: relative;
+				// 	display: grid;
+				// 	grid-template-columns: 5px 1fr 5px;
+				// 	grid-template-rows: 1fr 10em;
+				// 	@include mixins.bp-medium{
+				// 		grid-template-columns: 5px 1fr 1fr 5px;
+				// 		grid-template-rows: 1fr ;
+				// 	}
+				// 	@include mixins.bp-large{
+				// 		grid-template-columns: 5px 36em 5px;
+				// 		grid-template-rows: 1fr ;
+						
+				// 	}
+				// }
+				// .benefits-banner{
+					
+				// 	img{
+				// 		grid-column: 2;
+				// 		max-width: 100vw;
+				// 		@include mixins.bp-medium{
+				// 			max-width: 50vw;
+				// 		}
+				// 		@include mixins.bp-large{
+				// 			max-width: 50vw;
+				// 			grid-column: 2/3;
+				// 			grid-row: 1;
+				// 			align-self: center;
+				// 		}
+				// 	}
+				// }
+				figcaption{
+					margin-left:1em;
 					grid-column: 2;
-					max-width: 100vw;
+					grid-row: 2;
+					align-self: center;
 					@include mixins.bp-medium{
-						max-width: 50vw;
-					}
-					@include mixins.bp-large{
-						max-width: 50vw;
-						grid-column: 2/3;
+						grid-column: 3;
 						grid-row: 1;
 						align-self: center;
+					}
+					@include mixins.bp-large{
+						grid-column: 2;
+						grid-row: 2;
+						align-self: center;
+					}
+					// .member-btns{
+					// 	display: flex;
+					// 	flex-direction: row;
+					// 	justify-content: center;
+						
+					// }
+					// p{
+					// 	font-size: 18px;
+					// 	font-weight: 400;
+					// 	margin-top: .5em;
+					// 	text-align: center;
+					// 	overflow: hidden;
+					// 	// font-family: 'Khula', sans-serif;
+					// }
+					button{
+						margin:.5em;
 					}
 				}
 			}
 			figcaption{
-				margin-left:1em;
-				grid-column: 2;
-				grid-row: 2;
-				align-self: center;
-				@include mixins.bp-medium{
-					grid-column: 3;
-					grid-row: 1;
-					align-self: center;
-				}
-				@include mixins.bp-large{
-					grid-column: 2;
-					grid-row: 2;
-					align-self: center;
-				}
-				.member-btns{
-					display: flex;
-					flex-direction: row;
-					justify-content: center;
-					
-				}
-				p{
-					font-size: 18px;
-					font-weight: 400;
-					margin-top: .5em;
-					text-align: center;
-					overflow: hidden;
-					// font-family: 'Khula', sans-serif;
-				}
-				button{
-					margin:.5em;
-				}
+				// text-decoration: none;
+				margin:2em;
 			}
-		}
-		
+			.memeber-benefits__btn{
+				margin-top: 1em;
+			}
+		}	
 	}
 	.nike-links{
 		margin-top: 2em;
@@ -831,6 +758,7 @@ header{
 	padding: .7em 1.5em .7em 1.5em;
 	text-align: center;
 	font-size: 1em;
+	cursor: pointer;
 	// width: 10%;
 	&:hover{
 		background: rgb(12, 90, 150);
@@ -1138,4 +1066,56 @@ footer{
 		padding: 1rem;
 	  }
 	}
-  }
+}
+
+//New Releases
+.new-releases__main{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr;
+		@include mixins.bp-medium{
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 1fr 1fr;
+		}
+		@include mixins.bp-large{
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			grid-template-rows: 1fr;
+		}
+		
+		.new-product{
+
+			&__img{
+				width: 100vw;
+				cursor: pointer;
+				@include mixins.bp-medium{
+					width:50vw;
+				}
+				@include mixins.bp-large{
+					width:25vw;
+				}
+			}
+			&__title{
+				margin-top: 1em;
+				font-size: 1.2em;
+				font-display: flex;
+				flex-direction: column;
+				text-align: center;
+				font-weight: bold;
+				
+				
+			}
+			&__description{
+				color: grey;
+				margin:.5em;
+				font-weight: normal;
+			}
+			&__price{
+				font-weight: bold;
+				// margin-bottom: ;
+			}
+			
+			
+		}
+	
+}
+

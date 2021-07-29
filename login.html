@@ -23,8 +23,9 @@
             <input type="checkbox" id="nike-header-menu" />
 
             <div class="nike-header-icon-container">
-                <img src="/dist/img/shopping-bag.png" alt="shopping bag logo" class="icons">
-                <img src="/dist/img/search-interface-symbol.png" alt="search logo" class="icons">
+                <a href="#" aria-label="item-in-bag-icon"><img src="/dist/img/shopping-bag.png" alt="shopping bag logo" class="icons"> </a>
+				<a href="#" aria-label="search-icon"><img src="/dist/img/search-interface-symbol.png" alt="search logo" class="icons"></a> 
+             </div>
             </div>
             
             <label for="nike-header-menu" class="nike-menu">
@@ -34,7 +35,7 @@
             
             <nav>
                 <ul>
-                    <li><a href="#">New Releases</a></li>
+                    <li><a href="newReleases.html">New Releases</a></li>
                     <li><a href="#">Men</a></li>
                     <li><a href="#">Women</a></li>
                     <li><a href="#">Kids</a></li>
@@ -68,7 +69,7 @@
                 <label for="email">Password: </label>
                     <input type="password" name="user_password" id="password">
                 <div class="radio-btns" id="age">
-                    <label for="Age" for="age"  aria-label="age">Age: <span class="disclaimer">*under 16 needs parent permission</span> </label>
+                    <label  for="age"  aria-label="age">Age: <span class="disclaimer">*under 16 needs parent permission</span> 
                     <div>
                         <input type="radio" style="vertical-align: middle" name="user_age" value="16_18" id="16_18">
                         <label for="16_18" class="inline">16-18</label> 
@@ -84,7 +85,8 @@
                     <div>
                         <input type="radio" name="user_age" value="35+" id="35+">
                         <label for="35+" class="inline">35+</label>
-                    </div>  
+                    </div>
+                </label>  
                 </div>
                 <div class="check-box"> 
                     <div>
