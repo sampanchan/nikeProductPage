@@ -18,14 +18,14 @@
 	<div class="loading"> <img src="/dist/img/logo3.jpg" alt="nike loading logo"> </div>
 	<header class="nike-nav">
 		<a href="index.html"> <img src="/dist/img/nikeLogo.png" alt="nike logo home button" class="logo"> </a>
-		<div class="nike-header-menu" aria-label="menu">
+		<div class="nike-header-menu">
 			<input type="checkbox" id="nike-header-menu" />
 			
-			<label for="nike-header-menu" class="nike-menu" id="menu"> 
+			<label for="nike-header-menu" class="nike-menu" id="menu" aria-label="menu" tabindex="1"> 
 				<span></span> 
 				<span></span> 
 			</label>
-			<nav aria-label="menu" for="menu">
+			<nav for="menu">
 				<ul>
 					<li><a href="newReleases.html">New Releases</a></li>
 					<li><a href="#">Men</a></li>
@@ -36,21 +36,21 @@
 					<li><a href="login.html">Sign Up/ Login</a></li>
 				</ul>
 			</nav>
-            <div class="nike-header-icon-container"> 
-				<a href="#" aria-label="item-in-bag-icon"><img src="/dist/img/shopping-bag.png" alt="shopping bag logo" class="icons"> </a>
-				<a href="#" aria-label="search-icon"><img src="/dist/img/search-interface-symbol.png" alt="search logo" class="icons"></a> 
-             </div>     
+			<div class="nike-header-icon-container"> 
+				<a href="#" aria-label="shopping-bag"><img src="/dist/img/shopping-bag.png" alt="shopping bag logo" class="icons"> </a>
+				<a href="#" aria-label="search"><img src="/dist/img/search-interface-symbol.png" alt="search logo" class="icons"></a> 
+			</div>	
 		</div>
 	</header>
-	<section class="sale-banner">
-		<div class="sale-banner-div">
-			<p>Free Shipping & 60 day Free Returns</p>
-			<p>Join Now</p>
-		</div>
+	<section class="sale-banner" >
+		<div class="sale-banner-div" role="#" aria-labelledby="banner">
+			<h3 id="banner">Free Shipping & 60 day Free Returns</h3>
+			<a href="">Join Now</a>
+		</div>	
 	</section>
-    <section class="filter-nav__second">
+    <section class="filter-nav__second" role="#" aria-labelledby="nav2">
 
-		 <nav aria-label="filter-menu" for="filter-menu">
+		 <nav id="nav2" aria-label="filter-menu">
             <ul>
                 <li><a href='#'>Shoes</a></li>
                 <li><a href="#">Sports Bras</a></li>
@@ -70,10 +70,10 @@
             </ul> 
         </nav>
 	</section>
-    <aside class="nike-filter-menu" aria-label="menu">
+    <aside class="nike-filter-menu" aria-label="filter-menu" >
         <input type="checkbox" id="nike-filter-menu" />
         
-        <label for="nike-filter-menu" class="nike-menu" id="filter-menu"> 
+        <label for="nike-filter-menu" class="nike-menu"  tabindex="1"> 
         Filter
             <div>
                 <span></span> 
@@ -81,7 +81,7 @@
             </div>
             
         </label>
-        <nav aria-label="filter-menu" for="filter-menu">
+        <nav >
             <ul>
                 <li><a href='#'>Shoes</a></li>
                 <li><a href="#">Sports Bras</a></li>
@@ -102,110 +102,136 @@
         </nav>  
     </aside>
 	<main class="new-releases__main" id="main-content">  
-        <article class="new-product__container">    
-            <figure class="new-product">
-                <a href="">
-                    <img class="new-product__img" src="/dist/img/newRelease1.jpg" alt="nike-air-max-2021-womens-shoe-1-colors-160-dollars">
-                </a>
-                <figcaption class="new-product__title">
-                    Nike Air Max 2021
-                    <p class="new-product__description">Womens' Shoe</p>
-                    <p class="new-product__description">1 colors</p>
-                    <p class="new-product__price">$160</p>
-                </figcaption>
-            </figure>
-            <figure class="new-product">
-                <a href="">
-                    <img class="new-product__img" src="/dist/img/newRelease3.jpg" alt="nike-sportswear-tech-fleece-mens-full-zip-hoodie-3-colors-140-dollars">
-                </a>
-                <figcaption class="new-product__title">
-                    Nike Sportswear Tech Fleece
-                    <p class="new-product__description">Men's Full-Zip Hoodie</p>
-                    <p class="new-product__description">3 colors</p>
-                    <p class="new-product__price">$140</p>
-                </figcaption>
-            </figure>
-            <figure class="new-product">
-                <a href="">
-                    <img class="new-product__img" src="/dist/img/newRelease4.jpg" alt="nike-sportswear-tech-fleece-mens-shorts-3-colors-85-dollars">
-                </a>
-                <figcaption class="new-product__title">
-                    Nike Sportswear Tech Fleece
-                    <p class="new-product__description">Men's Shorts</p>
-                    <p class="new-product__description">3 colors</p>
-                    <p class="new-product__price">$85</p>
-                </figcaption>
-            </figure>
-            <figure class="new-product">
-                <a href="">
-                    <img class="new-product__img" src="/dist/img/newRelease2.jpg" alt="nike-air-force-one-crater-flyknight-mens-shoe-1-colors-110-dollars">
-                </a>
-                <figcaption class="new-product__title">
-                    Nike Air Force 1 Crater FlyKnight
-                    <p class="new-product__description">Mens' Shoe</p>
-                    <p class="new-product__description">1 colors</p>
-                    <p class="new-product__price">$110</p>
-                </figcaption>
-            </figure>
-            <figure class="new-product">
-                <a href="">
-                    <img class="new-product__img" src="/dist/img/newRelease5.jpg" alt="nike-air-force-one-07-lv8-mens-shoe-3-colors-110-dollars">
-                </a>
-                <figcaption class="new-product__title">
-                    Nike Air Force 1 '07 LV8'
-                    <p class="new-product__description">Mens' Shoe</p>
-                    <p class="new-product__description">3 colors</p>
-                    <p class="new-product__price">$110</p>
-                </figcaption>
-            </figure>
-            <figure class="new-product">
-                <a href="">
-                    <img class="new-product__img" src="/dist/img/newRelease6.jpg" alt="jordan-little-kids-hoodie-and-pants-set-1-colors-55-dollars">
-                </a>
-                <figcaption class="new-product__title">
-                    Jordan
-                    <p class="new-product__description">Little Kids' Hoodie and Pants Set</p>
-                    <p class="new-product__description">1 colors</p>
-                    <p class="new-product__price">$55</p>
-                </figcaption>
-            </figure>
-            <figure class="new-product">
-                <a href="">
-                    <img class="new-product__img" src="/dist/img/newRelease7.jpg" alt="womens-over-oversized-fleece-crew-6-colors-65-dollars">
-                </a>
-                <figcaption class="new-product__title">
-                    Nike Sportswear Collection
-                    <p class="new-product__description">Womens' Over-Oversized Fleece Crew</p>
-                    <p class="new-product__description">6 colors</p>
-                    <p class="new-product__price">$65</p>
-                </figcaption>
-            </figure>
-            <figure class="new-product">
-                <a href="">
-                    <img class="new-product__img" src="/dist/img/newRelease8.jpg" alt="womens-woven-high-rise-shorts-4-colors-50-dollars">
-                </a>
-                <figcaption class="new-product__title">
-                    Nike Air
-                    <p class="new-product__description">Womens' Woven High-Rise Shorts</p>
-                    <p class="new-product__description">4 colors</p>
-                    <p class="new-product__price">$50</p>
-                </figcaption>
-            </figure>
+        <article class="new-product__container"> 
+            <a href="#">
+                <figure class="new-product">
+                
+                    <img class="new-product__img" src="/dist/img/newRelease1.jpg" alt="shoe">
+                
+                    <figcaption class="new-product__title">
+                        Nike Air Max 2021
+                        <p class="new-product__description" aria-hidden="true">Womens' Shoe</p>
+                        <p class="new-product__description">1 colors</p>
+                        <p class="new-product__price">$160</p>
+                    </figcaption>
+                </figure>
+            </a>
+            <a href="#">
+                <figure class="new-product">
+                    
+                        <img class="new-product__img" src="/dist/img/newRelease3.jpg" alt="apparel">
+                   
+                    <figcaption class="new-product__title">
+                        Nike Sportswear Tech Fleece
+                        <p class="new-product__description">Men's Full-Zip Hoodie</p>
+                        <p class="new-product__description" >3 colors</p>
+                        <p class="new-product__price">$140</p>
+                    </figcaption>
+                </figure>
+            </a>
+            <a href="#">
+                <figure class="new-product">
+                    
+                        <img class="new-product__img" src="/dist/img/newRelease4.jpg" alt="apparel">
+                    
+                    <figcaption class="new-product__title">
+                        Nike Sportswear Tech Fleece
+                        <p class="new-product__description" aria-hidden="true">Men's Shorts</p>
+                        <p class="new-product__description" >3 colors</p>
+                        <p class="new-product__price">$85</p>
+                    </figcaption>
+                </figure>
+            </a>
+            <a href="#">
+                <figure class="new-product">
+                   
+                        <img class="new-product__img" src="/dist/img/newRelease2.jpg" alt="shoe">
+                    
+                    <figcaption class="new-product__title">
+                        Nike Air Force 1 Crater FlyKnight
+                        <p class="new-product__description"aria-hidden="true">Mens' Shoe</p>
+                        <p class="new-product__description" >1 colors</p>
+                        <p class="new-product__price">$110</p>
+                    </figcaption>
+                </figure>
+            </a>
+            <a href="#">
+                <figure class="new-product">
+                    
+                        <img class="new-product__img" src="/dist/img/newRelease5.jpg" alt="shoe">
+                    
+                    <figcaption class="new-product__title">
+                        Nike Air Force 1 '07 LV8'
+                        <p class="new-product__description" aria-hidden="true">Mens' Shoe</p>
+                        <p class="new-product__description" >3 colors</p>
+                        <p class="new-product__price">$110</p>
+                    </figcaption>
+                </figure>
+            </a>
+            <a href="#">
+                <figure class="new-product">
+                    
+                        <img class="new-product__img" src="/dist/img/newRelease6.jpg" alt="apparel">
+                   
+                    <figcaption class="new-product__title">
+                        Jordan
+                        <p class="new-product__description">Little Kids' Hoodie and Pants Set</p>
+                        <p class="new-product__description">1 colors</p>
+                        <p class="new-product__price">$55</p>
+                    </figcaption>
+                </figure>
+            </a>  
+            <a href="#">
+                <figure class="new-product">
+                    
+                        <img class="new-product__img" src="/dist/img/newRelease7.jpg" alt="apparel">
+                   
+                    <figcaption class="new-product__title">
+                        Nike Sportswear Collection
+                        <p class="new-product__description">Womens' Over-Oversized Fleece Crew</p>
+                        <p class="new-product__description">6 colors</p>
+                        <p class="new-product__price">$65</p>
+                    </figcaption>
+                </figure>
+            </a>
+            <a href="#">
+                <figure class="new-product">
+                    
+                        <img class="new-product__img" src="/dist/img/newRelease8.jpg" alt="apparel">
+                    
+                    <figcaption class="new-product__title">
+                        Nike Air
+                        <p class="new-product__description">Womens' Woven High-Rise Shorts</p>
+                        <p class="new-product__description">4 colors</p>
+                        <p class="new-product__price">$50</p>
+                    </figcaption>
+                </figure>
+            </a> 
+            
+           
+            
+            
+            
+           
+            
+            
             
     <!-- </div> -->
         </article>
     </main>
-	<footer class="nike-footer">
-		<div id="external-links">
-			<ul class="external-links">
-				<li><a href="">gift cards</a></li>
-				<li><a href="">promotions</a></li>
-				<li><a href="">find a store</a></li>
-				<li><a href="">sign up for email</a></li>
-				<li><a href="">become a member</a></li>
-				<li><a href="">nike journal</a></li>
-				<li><a href="">send feedback</a></li>
-			</ul>
+	<footer class="nike-footer" role="#" aria-labelledby="external-links">
+		<div id="external-links" >
+			<nav aria-label="external-links">
+				<ul class="external-links">
+					<li><a href="">gift cards</a></li>
+					<li><a href="">promotions</a></li>
+					<li><a href="">find a store</a></li>
+					<li><a href="">sign up for email</a></li>
+					<li><a href="">become a member</a></li>
+					<li><a href="">nike journal</a></li>
+					<li><a href="">send feedback</a></li>
+				</ul>
+			</nav>	
 		</div>
 		<div id="external-links">
 			<ul class="external-links flex-links">
@@ -215,29 +241,36 @@
 					<li><a href="">about nike</a></li> <span>+</span> </div>
 			</ul>
 		</div>
-		<section class="social-media"> 
-            <ul>
-                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fab fa-facebook-f"></i> </a></li>
-                <li><a href="#"><i class="fab fa-youtube"></i> </a></li>
-                <li><a href="#"><i class="fab fa-instagram"></i> </a></li>
-            </ul>
-            
-        </section>
-		<div class="location-copyright">
-			<div class="location">
+		<section class="social-media" role="#" aria-labelledby="social">
+			<div id="social">
+				<nav aria-label="social-media">
+					<ul>
+						<li><a href="#" aria-label="twitter"><i class="fab fa-twitter"></i></a></li>
+						<li><a href="#" aria-label="facebook"><i class="fab fa-facebook-f"></i> </a></li>
+						<li><a href="#" aria-label="youtube"><i class="fab fa-youtube"></i> </a></li>
+						<li><a href="#" aria-label="instagram"><i class="fab fa-instagram"></i> </a></li>
+					</ul> 
+				</nav>
+			</div> 	
+		</section>
+		<div class="location-copyright" role="#" aria-labelledby="terms">
+			<div class="location" >
 				<div> <i class="fas fa-map-marker-alt"></i>
 					<p>United States</p>
 				</div>
 				<p>&#169; 2021 Nike, Inc. All Rights Reserved</p>
 			</div>
-			<ul class="terms-links">
-				<li><a href="">Guides</a></li>
-				<li><a href="">Terms of Sale</a></li>
-				<li><a href="">Terms of Use</a></li>
-				<li><a href="">Nike Privacy Policy</a></li>
-				<li><a href="">CA Supply Chains Act</a></li>
-			</ul>
+			<div id="terms">
+				<nav  aria-label="terms">
+					<ul class="terms-links">
+						<li><a href="">Guides</a></li>
+						<li><a href="">Terms of Sale</a></li>
+						<li><a href="">Terms of Use</a></li>
+						<li><a href="">Nike Privacy Policy</a></li>
+						<li><a href="">CA Supply Chains Act</a></li>
+					</ul>
+				</nav>
+			</div>	
 		</div>
 	</footer>
 	<script src="dist/js/main.js"></script>

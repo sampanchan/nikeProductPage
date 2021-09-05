@@ -21,11 +21,11 @@
 		<div class="nike-header-menu" aria-label="menu">
 			<input type="checkbox" id="nike-header-menu" />
 			
-			<label for="nike-header-menu" class="nike-menu" id="menu"> 
+			<label for="nike-header-menu" class="nike-menu" id="menu" aria-label="menu" tabindex="1"> 
 				<span></span> 
 				<span></span> 
 			</label>
-			<nav aria-label="menu" for="menu">
+			<nav for="menu">
 				<ul>
 					<li><a href="newReleases.html">New Releases</a></li>
 					<li><a href="#">Men</a></li>
@@ -37,22 +37,23 @@
 				</ul>
 			</nav>
 			<div class="nike-header-icon-container"> 
-				<a href="#" aria-label="item-in-bag-icon"><img src="/dist/img/shopping-bag.png" alt="shopping bag logo" class="icons"> </a>
-				<a href="#" aria-label="search-icon"><img src="/dist/img/search-interface-symbol.png" alt="search logo" class="icons"></a> 
+				<a href="#" aria-label="shopping-bag"><img src="/dist/img/shopping-bag.png" alt="shopping bag logo" class="icons"> </a>
+				<a href="#" aria-label="search"><img src="/dist/img/search-interface-symbol.png" alt="search logo" class="icons"></a> 
 			</div>	
 		</div>
 	</header>
-	<section class="sale-banner">
-		<div class="sale-banner-div">
-			<p>Free Shipping & 60 day Free Returns</p>
-			<p>Join Now</p>
-		</div>
+	<section class="sale-banner" >
+		<div class="sale-banner-div" role="#" aria-labelledby="banner">
+			<h3 id="banner">Free Shipping & 60 day Free Returns</h3>
+			<a href="">Join Now</a>
+		</div>	
 	</section>
 	<main class="nike-main" id="main-content">
-		<div class="nike-title title">
-			<h1 aria-label="air-beyong-compare">air beyond compare</h1> <span id="explore-the-best-of-nike-airmax" aria-labelledby="explore-the-best-of-nike-airmax">Shop the best of Nike</span>
+		<div class="nike-title title" role="#" aria-labelledby="title">
+			<h1  id="title">air beyond compare</h1> <span id="explore-the-best-of-nike-airmax" aria-labelledby="explore-the-best-of-nike-airmax">Shop the best of Nike</span>
 			<button class="btn btn-primary" aria-labelledby="explore-the-best-of-nike-airmax">Shop Nike</button>
-			<h2>Air Max</h2> </div>
+			<h2>Air Max</h2>
+		</div>
 		<section class="nike-grid primary-grid sections">
 			<div class="nike-image max-one" >
 				<button class="btn btn-secondary">Shop Men's</button>
@@ -66,10 +67,9 @@
 			<div class="nike-image max-four">
 				<button class="btn btn-secondary">Shop All</button>
 			</div>
-			
 		</section>
-		<section class="featured-style sections">
-			<h3>Featured Styles</h3>
+		<section class="featured-style sections" role="#" aria-labelledby="featuredStyles">
+			<h3 id="featuredStyles">Featured Styles</h3>
 			<div class="featured-style__secondary-grid">
 				<div class="featured-style__container"  id="outfit-essentials">
 					<h4 class="featured-style__title" id="outfit-essentials-header" >Outfit Essentials</h4>
@@ -83,57 +83,57 @@
 				</div>
 			</div>
 		</section>
-		<section class="nike-shoe-list sections">
-			<h3>The Latest And Greatest</h3>
+		<section class="nike-shoe-list sections" role="#" aria-labelledby="shoeList">
+			<h3 id="shoeList">The Latest And Greatest</h3>
 			<div class="nike-grid tertiary-grid">
-				<figure class="product-shoe">
-					<a href="">
-						<img class="product-shoe__img" src="/dist/img/nike20.jpg" alt="nike-air-max-90-womens-show-14-colors-100-dollars">
-					</a>
-					<figcaption class="product-shoe__title">
-						Nike Air Max 90
-						<p class="product-shoe__description">Basketball Shoe</p>
-						<p class="product-shoe__description">2 colors</p>
-						<p class="prodcut-shoe__price">$130</p>
-					</figcaption>
-				</figure>
-				<figure class="product-shoe">
-					<a href="">
-						<img class="product-shoe__img" src="/dist/img/nike21.jpg" alt="nike-air-max-90-womens-show-14-colors-100-dollars">
-					</a>
-					<figcaption class="product-shoe__title">
-						Jordan 'Why Not?' Zer0.4
-						<p class="product-shoe__description">Womens' Shoe</p>
-						<p class="product-shoe__description">14 colors</p>
-						<p class="prodcut-shoe__price">$100</p>
-					</figcaption>
-				</figure>
-				<figure class="product-shoe">
-					<a href="">
-						<img class="product-shoe__img" src="/dist/img/nike22.jpg" alt="nike-air-max-90-womens-show-14-colors-100-dollars">
-					</a>
-					<figcaption class="product-shoe__title">
-						Nike Air Max 270
-						<p class="product-shoe__description">Big Kids' Shoe</p>
-						<p class="product-shoe__description">15 colors</p>
-						<p class="prodcut-shoe__price">$120</p>
-					</figcaption>
-				</figure>
-				<figure class="product-shoe">
-					<a href="">
-						<img class="product-shoe__img" src="/dist/img/nike23.jpg" alt="nike-air-max-90-womens-show-14-colors-100-dollars">
-					</a>
-					<figcaption class="product-shoe__title">
-						Nike Air Huarache
-						<p class="product-shoe__description">Womens' Shoe</p>
-						<p class="product-shoe__description">3 colors</p>
-						<p class="prodcut-shoe__price">$120</p>
-					</figcaption>
-				</figure>
+				<a href="#" >
+					<figure class="product-shoe">
+						<img class="product-shoe__img" src="/dist/img/nike20.jpg" alt="shoe">
+						<figcaption class="product-shoe__title">
+							Nike Air Max 90
+							<p class="product-shoe__description" aria-hidden="true">Basketball Shoe</p>
+							<p class="product-shoe__description" >2 colors</p>
+							<p class="prodcut-shoe__price">$130</p>
+						</figcaption>
+					</figure>
+				</a>
+				<a href="#">
+					<figure class="product-shoe">
+							<img class="product-shoe__img" src="/dist/img/nike21.jpg" alt="shoe">
+						<figcaption class="product-shoe__title">
+							Jordan 'Why Not?' Zer0.4
+							<p class="product-shoe__description" aria-hidden="true">Womens' Shoe</p>
+							<p class="product-shoe__description">14 colors</p>
+							<p class="prodcut-shoe__price">$100</p>
+						</figcaption>
+					</figure>
+				</a>
+				<a href="#">
+					<figure class="product-shoe">
+							<img class="product-shoe__img" src="/dist/img/nike22.jpg" alt="shoe">
+						<figcaption class="product-shoe__title">
+							Nike Air Max 270
+							<p class="product-shoe__description">Big Kids' Shoe</p>
+							<p class="product-shoe__description" aria-hidden="true">15 colors</p>
+							<p class="prodcut-shoe__price">$120</p>
+						</figcaption>
+					</figure>
+				</a>
+				<a href="#">
+					<figure class="product-shoe">
+							<img class="product-shoe__img" src="/dist/img/nike23.jpg" alt="shoe">
+						<figcaption class="product-shoe__title">
+							Nike Air Huarache
+							<p class="product-shoe__description" aria-hidden="true">Womens' Shoe</p>
+							<p class="product-shoe__description">3 colors</p>
+							<p class="prodcut-shoe__price">$120</p>
+						</figcaption>
+					</figure>
+				</a>	
 			</div>			
 		</section>
-		<section class="trending sections">
-			<h3>Trending</h3>
+		<section class="trending sections" role="#" aria-labelledby="trending">
+			<h3 id="trending">Trending</h3>
 			<div class="trending__secondary-grid">
 				<div class="trending-style__contianer" id="new-styles-for-all-athletes">
 					<h4 class="trending-style__title" id="athlete-styles-header">New Styles for All Athletes</h4>
@@ -144,46 +144,48 @@
 					<h4 class="trending-style__title" id="gym-outfits-header">Look Good in The Gym</h4>
 					<input  class="trending-style__input" type="button" name="gym-outfits" aria-label="shop">
 					<button class="trending-style__btn btn" id="gym-outfits-btn"  aria-labelledby="gym-outfits" type="submit">Shop</button>
-				</div>
-				
+				</div>	
 			</div>
 		</section>
-		<section class="member-benefits sections">
-			<h3>Member Benefits</h3>
+		<section class="member-benefits sections" role="#" aria-labelledby="member">
+			<h3 id="member">Member Benefits</h3>
 			<a href="#" class="memeber-benefits__a">
 				<figure class="member-benefits__figure" aria-label="where all atheles belong poster whith logo" >
 					<img class="memeber-benefits__img" src="/dist/img/nike-just-do-it.jpg" alt="member benefits where all atheles belong poster whith logo" loading="lazy" aria-label="where all atheles belong poster whith logo">
-					<figcaption class="memeber-benefits__caption" id="nike-poster" aria-labelledby="nike-poster">
+					<figcaption class="memeber-benefits__caption" >
 						Things are better as a Nike Member. </br>Get first and exclusive access to the newest styles & innovation, free shipping, birthday rewards and more
-						<div class="memeber-benefits__btn">
+						<div class="memeber-benefits__btn" >
 							<button class="btn btn-primary" id="style-btn-two">Join Us</button>
 							<button class="btn btn-primary" id="style-btn-two">Sign In</button>
 						</div>
 					</figcaption>
 				</figure>
-			</a>
-			
+			</a>	
 		</section>
-		<section class="nike-links">
-			<ul>
-				<li><a href="">Featured</a></li>
-				<li><a href="">Shoes</a></li>
-				<li><a href="">Clothing</a></li>
-				<li><a href="">Kids</a></li>
-			</ul>
+		<section class="nike-links" role="#" aria-labelledby="nav">
+			<nav id="nav" aria-label="menu">
+				<ul>
+					<li><a href="">Featured</a></li>
+					<li><a href="">Shoes</a></li>
+					<li><a href="">Clothing</a></li>
+					<li><a href="">Kids</a></li>
+				</ul>
+			</nav>	
 		</section>
 	</main>
-	<footer class="nike-footer">
-		<div id="external-links">
-			<ul class="external-links">
-				<li><a href="">gift cards</a></li>
-				<li><a href="">promotions</a></li>
-				<li><a href="">find a store</a></li>
-				<li><a href="">sign up for email</a></li>
-				<li><a href="">become a member</a></li>
-				<li><a href="">nike journal</a></li>
-				<li><a href="">send feedback</a></li>
-			</ul>
+	<footer class="nike-footer" role="#" aria-labelledby="external-links">
+		<div id="external-links" >
+			<nav aria-label="external-links">
+				<ul class="external-links">
+					<li><a href="">gift cards</a></li>
+					<li><a href="">promotions</a></li>
+					<li><a href="">find a store</a></li>
+					<li><a href="">sign up for email</a></li>
+					<li><a href="">become a member</a></li>
+					<li><a href="">nike journal</a></li>
+					<li><a href="">send feedback</a></li>
+				</ul>
+			</nav>	
 		</div>
 		<div id="external-links">
 			<ul class="external-links flex-links">
@@ -193,28 +195,36 @@
 					<li><a href="">about nike</a></li> <span>+</span> </div>
 			</ul>
 		</div>
-		<section class="social-media"> 
-			<ul>
-                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fab fa-facebook-f"></i> </a></li>
-                <li><a href="#"><i class="fab fa-youtube"></i> </a></li>
-                <li><a href="#"><i class="fab fa-instagram"></i> </a></li>
-            </ul> 
+		<section class="social-media" role="#" aria-labelledby="social">
+			<div id="social">
+				<nav aria-label="social-media">
+					<ul>
+						<li><a href="#" aria-label="twitter"><i class="fab fa-twitter"></i></a></li>
+						<li><a href="#" aria-label="facebook"><i class="fab fa-facebook-f"></i> </a></li>
+						<li><a href="#" aria-label="youtube"><i class="fab fa-youtube"></i> </a></li>
+						<li><a href="#" aria-label="instagram"><i class="fab fa-instagram"></i> </a></li>
+					</ul> 
+				</nav>
+			</div> 	
 		</section>
-		<div class="location-copyright">
-			<div class="location">
+		<div class="location-copyright" role="#" aria-labelledby="terms">
+			<div class="location" >
 				<div> <i class="fas fa-map-marker-alt"></i>
 					<p>United States</p>
 				</div>
 				<p>&#169; 2021 Nike, Inc. All Rights Reserved</p>
 			</div>
-			<ul class="terms-links">
-				<li><a href="">Guides</a></li>
-				<li><a href="">Terms of Sale</a></li>
-				<li><a href="">Terms of Use</a></li>
-				<li><a href="">Nike Privacy Policy</a></li>
-				<li><a href="">CA Supply Chains Act</a></li>
-			</ul>
+			<div id="terms">
+				<nav  aria-label="terms">
+					<ul class="terms-links">
+						<li><a href="">Guides</a></li>
+						<li><a href="">Terms of Sale</a></li>
+						<li><a href="">Terms of Use</a></li>
+						<li><a href="">Nike Privacy Policy</a></li>
+						<li><a href="">CA Supply Chains Act</a></li>
+					</ul>
+				</nav>
+			</div>	
 		</div>
 	</footer>
 	<script src="dist/js/main.js"></script>

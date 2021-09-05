@@ -227,14 +227,15 @@ header {
 header .logo {
   max-width: 65px;
   margin: 0 auto;
-  margin-left: 10px;
+  margin-left: 0.5em;
 }
 header a {
   text-decoration: none;
 }
 header a .icons {
   max-width: 25px;
-  margin-top: 5px;
+  margin-top: 1em;
+  margin-right: 0.5em;
 }
 @media screen and (min-width: 768px) {
   header a .icons {
@@ -258,10 +259,18 @@ header .nike-header-menu .nike-header-icon-container .icons {
   margin-left: 10px;
 }
 header .nike-header-menu #nike-header-menu {
-  display: none;
+  opacity: 0;
+  position: absolute;
+  top: 40%;
+  right: 70%;
 }
 header .nike-header-menu label {
-  margin-top: 0.2em;
+  margin-top: 1em;
+}
+@media screen and (min-width: 768px) {
+  header .nike-header-menu label {
+    display: none;
+  }
 }
 header .nike-header-menu label span {
   cursor: pointer;
@@ -304,10 +313,12 @@ header .nike-header-menu nav {
   height: 0vh;
   transition: 0.5s;
   overflow: hidden;
+  visibility: hidden;
 }
 @media screen and (min-width: 768px) {
   header .nike-header-menu nav {
     overflow: visible;
+    visibility: visible;
     top: 35%;
     right: 100%;
     width: 60vw;
@@ -360,11 +371,18 @@ header .nike-header-menu nav ul > li a:hover {
 }
 header .nike-header-menu #nike-header-menu:checked ~ nav {
   height: 100vh;
+  display: block;
+  height: 100vh;
+  visibility: visible;
+}
+@media screen and (min-width: 768px) {
+  header .nike-header-menu #nike-header-menu:checked ~ nav {
+    visibility: hidden;
+  }
 }
 
 .sale-banner {
   background-color: #dedede;
-  width: 100%;
   height: 8vh;
   text-align: center;
   display: flex;
@@ -372,15 +390,17 @@ header .nike-header-menu #nike-header-menu:checked ~ nav {
   justify-content: center;
   align-items: center;
 }
-.sale-banner .sale-banner-div > p {
-  font-size: 13px;
+.sale-banner .sale-banner-div > h3 {
+  font-size: 0.8em;
   margin: 0;
 }
-.sale-banner .sale-banner-div > p:nth-child(1) {
+.sale-banner .sale-banner-div > h3:nth-child(1) {
   font-weight: bold;
 }
-.sale-banner .sale-banner-div > p:nth-child(2) {
+.sale-banner .sale-banner-div > a {
   text-decoration: underline;
+  color: black;
+  font-size: 0.8em;
   font-weight: 400;
 }
 
@@ -491,6 +511,10 @@ header .nike-header-menu #nike-header-menu:checked ~ nav {
 .nike-main .nike-grid .max-one {
   background-image: url(/dist/img/nike1.jpg);
 }
+.nike-main .nike-grid .max-one .btn-secondary {
+  bottom: 50%;
+  right: 62%;
+}
 @media screen and (min-width: 768px) {
   .nike-main .nike-grid .max-one .btn-secondary {
     left: 15%;
@@ -508,16 +532,16 @@ header .nike-header-menu #nike-header-menu:checked ~ nav {
 }
 .nike-main .nike-grid .max-two .btn-secondary {
   bottom: 50%;
-  right: -43%;
+  right: 8%;
 }
 @media screen and (min-width: 768px) {
   .nike-main .nike-grid .max-two .btn-secondary {
-    left: 15%;
+    right: 12%;
   }
 }
 @media screen and (min-width: 992px) {
   .nike-main .nike-grid .max-two .btn-secondary {
-    left: -68%;
+    right: 55%;
     bottom: 5%;
   }
 }
@@ -527,7 +551,7 @@ header .nike-header-menu #nike-header-menu:checked ~ nav {
 }
 .nike-main .nike-grid .max-three .btn-secondary {
   bottom: 0%;
-  left: 8%;
+  left: 12%;
 }
 @media screen and (min-width: 768px) {
   .nike-main .nike-grid .max-three .btn-secondary {
@@ -546,11 +570,11 @@ header .nike-header-menu #nike-header-menu:checked ~ nav {
 }
 .nike-main .nike-grid .max-four .btn-secondary {
   bottom: 0%;
-  right: -43%;
+  right: 12%;
 }
 @media screen and (min-width: 992px) {
   .nike-main .nike-grid .max-four .btn-secondary {
-    left: 35%;
+    right: 5%;
     bottom: 5%;
   }
 }
@@ -784,24 +808,6 @@ header .nike-header-menu #nike-header-menu:checked ~ nav {
   display: grid;
   -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
-  -ms-grid-rows: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-}
-.nike-main .nike-shoe-list .tertiary-grid > *:nth-child(1) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-}
-.nike-main .nike-shoe-list .tertiary-grid > *:nth-child(2) {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-}
-.nike-main .nike-shoe-list .tertiary-grid > *:nth-child(3) {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-}
-.nike-main .nike-shoe-list .tertiary-grid > *:nth-child(4) {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
 }
 @media screen and (min-width: 768px) {
   .nike-main .nike-shoe-list .tertiary-grid {
@@ -851,21 +857,25 @@ header .nike-header-menu #nike-header-menu:checked ~ nav {
     -ms-grid-column: 4;
   }
 }
-.nike-main .nike-shoe-list .tertiary-grid .product-shoe__img {
+.nike-main .nike-shoe-list .tertiary-grid a {
+  text-decoration: none;
+  color: black;
+}
+.nike-main .nike-shoe-list .tertiary-grid a .product-shoe__img {
   width: 100vw;
   cursor: pointer;
 }
 @media screen and (min-width: 768px) {
-  .nike-main .nike-shoe-list .tertiary-grid .product-shoe__img {
+  .nike-main .nike-shoe-list .tertiary-grid a .product-shoe__img {
     width: 50vw;
   }
 }
 @media screen and (min-width: 992px) {
-  .nike-main .nike-shoe-list .tertiary-grid .product-shoe__img {
+  .nike-main .nike-shoe-list .tertiary-grid a .product-shoe__img {
     width: 25vw;
   }
 }
-.nike-main .nike-shoe-list .tertiary-grid .product-shoe__title {
+.nike-main .nike-shoe-list .tertiary-grid a .product-shoe__title {
   margin-top: 1em;
   font-size: 1.2em;
   font-display: flex;
@@ -873,12 +883,12 @@ header .nike-header-menu #nike-header-menu:checked ~ nav {
   text-align: center;
   font-weight: bold;
 }
-.nike-main .nike-shoe-list .tertiary-grid .product-shoe__description {
+.nike-main .nike-shoe-list .tertiary-grid a .product-shoe__description {
   color: grey;
   margin: 0.5em;
   font-weight: normal;
 }
-.nike-main .nike-shoe-list .tertiary-grid .product-shoe__price {
+.nike-main .nike-shoe-list .tertiary-grid a .product-shoe__price {
   font-weight: bold;
 }
 .nike-main .sections h3 {
@@ -998,8 +1008,6 @@ header .nike-header-menu #nike-header-menu:checked ~ nav {
 
 .btn-secondary {
   position: absolute;
-  bottom: 50%;
-  left: 8%;
   z-index: 2;
   background: white;
   border: black solid 2px;
@@ -1125,7 +1133,7 @@ footer .location-copyright .terms-links li a:hover {
   margin: 0 auto;
 }
 .sign-up-main #form {
-  max-width: 300px;
+  max-width: 400px;
   margin: 10px auto;
   padding: 10px 20px;
   background: #e4e4e4;
@@ -1206,6 +1214,9 @@ footer .location-copyright .terms-links li a:hover {
 .accordian-item button {
   margin: 1em auto;
   margin-bottom: 1em;
+}
+.accordian-item input {
+  visibility: hidden;
 }
 .accordian-item__button {
   border: 0;
@@ -1296,7 +1307,10 @@ footer .location-copyright .terms-links li a:hover {
   align-items: center;
 }
 .nike-filter-menu #nike-filter-menu {
-  display: none;
+  opacity: 0;
+  position: absolute;
+  top: 60%;
+  left: 50%;
 }
 .nike-filter-menu label {
   margin-top: 0.5em;
@@ -1314,6 +1328,7 @@ footer .location-copyright .terms-links li a:hover {
 @media screen and (min-width: 992px) {
   .nike-filter-menu label {
     display: none;
+    visibility: hidden;
   }
 }
 .nike-filter-menu label span {
@@ -1359,10 +1374,12 @@ footer .location-copyright .terms-links li a:hover {
   height: 0vh;
   transition: 0.5s;
   overflow: hidden;
+  visibility: hidden;
 }
 @media screen and (min-width: 992px) {
   .nike-filter-menu nav {
     overflow: visible;
+    visibility: visible;
     top: 35%;
     right: 100%;
     width: 60vw;
@@ -1423,11 +1440,15 @@ footer .location-copyright .terms-links li a:hover {
   }
 }
 .nike-filter-menu #nike-filter-menu:checked ~ nav {
+  display: block;
+  height: 50vh;
+  visibility: visible;
   height: 100vh;
 }
 @media screen and (min-width: 992px) {
   .nike-filter-menu #nike-filter-menu:checked ~ nav {
     display: none;
+    visibility: hidden;
   }
 }
 
@@ -1468,37 +1489,45 @@ footer .location-copyright .terms-links li a:hover {
     -ms-grid-column: 4;
   }
 }
-.new-releases__main .new-product__container .new-product__img {
+.new-releases__main .new-product__container a {
+  text-decoration: none;
+  color: black;
+}
+.new-releases__main .new-product__container a .new-product {
+  margin: 0em 0em 3em 0em;
+}
+.new-releases__main .new-product__container a .new-product__img {
   width: 100vw;
   cursor: pointer;
+  margin-bottom: 3em;
 }
 @media screen and (min-width: 768px) {
-  .new-releases__main .new-product__container .new-product__img {
+  .new-releases__main .new-product__container a .new-product__img {
     width: 50vw;
   }
 }
 @media screen and (min-width: 992px) {
-  .new-releases__main .new-product__container .new-product__img {
+  .new-releases__main .new-product__container a .new-product__img {
     width: 25vw;
   }
 }
-.new-releases__main .new-product__container .new-product__title {
-  margin-top: 1em;
+.new-releases__main .new-product__container a .new-product__title {
+  margin: 3em;
   font-size: 1.2em;
   font-display: flex;
   flex-direction: column;
   text-align: center;
   font-weight: bold;
 }
-.new-releases__main .new-product__container .new-product__description {
+.new-releases__main .new-product__container a .new-product__description {
   color: grey;
   margin: 0.5em;
   font-weight: normal;
 }
-.new-releases__main .new-product__container .new-product__price {
+.new-releases__main .new-product__container a .new-product__price {
   font-weight: bold;
 }
-.new-releases__main .new-product__container .new-product figcaption {
+.new-releases__main .new-product__container a .new-product figcaption {
   margin: 0;
 }
 /*# sourceMappingURL=main.css.map */

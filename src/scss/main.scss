@@ -98,24 +98,23 @@ div.loading {
 
 header{
 	background: white;
-	// margin: 0 auto;
-	// padding: 0;
 	width: 100%;
 	height:9vh;
-	// position: fixed;
+	
 	
 	
 	.logo{
 		max-width: 65px;
 		margin: 0 auto;
-		margin-left:10px ;
+		margin-left:.5em ;
 		
 	}
 	a{
 		text-decoration: none;
 		.icons{
 			max-width: 25px;
-			margin-top: 5px;
+			margin-top: 1em;
+			margin-right: .5em;
 			@include mixins.bp-medium{
 				margin-right:.5em ;
 			}
@@ -143,11 +142,17 @@ header{
 		}
 		
 		#nike-header-menu{
-			display: none;
+			opacity: 0;
+			position: absolute;
+    		top: 40%;
+    		right: 70%;
 		}
 			
 		label {
-			margin-top: .2em;
+			margin-top: 1em;
+			@include mixins.bp-medium{
+				display:none;
+			}
 			span{
 				cursor: pointer;
 				display: block;
@@ -183,7 +188,6 @@ header{
 			
 		}
 		nav{
-			// display: none;
 			background: rgb(196, 229, 249);
 			position: absolute;
 			top: 0;
@@ -193,8 +197,10 @@ header{
 			height: 0vh;
 			transition:  .5s;
 			overflow: hidden;
+			visibility: hidden;
 			@include mixins.bp-medium{
 				overflow: visible;
+				visibility: visible;
 				top: 35%;
     			right: 100%;
 				width: 60vw;
@@ -244,8 +250,13 @@ header{
 			}
 		}
 		#nike-header-menu:checked ~ nav {
-			// display: block;
 			height: 100vh;
+			display: block;
+			height: 100vh;
+			visibility: visible;
+			@include mixins.bp-medium{
+				visibility: hidden;
+			}
 		}
 	}
 
@@ -256,7 +267,7 @@ header{
 .sale-banner{
 	background-color: rgb(222, 222, 222);
 	// position: fixed;
-	width: 100%;
+	// width: 100%;
 	height: 8vh;
 	text-align: center;
 	display: flex;
@@ -266,16 +277,23 @@ header{
 	// top:100%;
 	.sale-banner-div{
 		
-		>p{
-			font-size: 13px;
+		>h3{
+			font-size: .8em;
 			margin: 0;
 			&:nth-child(1){
 				font-weight: bold;
 			}
-			&:nth-child(2){
-				text-decoration: underline;
-				font-weight: 400;
-			}
+			// &:nth-child(2){
+			// 	text-decoration: underline;
+				
+			// }
+		}
+		>a{
+			text-decoration: underline;
+			color:black;
+			font-size: .8em;
+			font-weight: 400;
+
 		}
 	}
 }
@@ -340,13 +358,15 @@ header{
 			// grid-column: 1;
 			background-image: url(/dist/img/nike1.jpg);
 			.btn-secondary{
+				bottom: 50%;
+    			right: 62%;
 				@include mixins.bp-medium{
 					left: 15%;
 				}
 				@include mixins.bp-large{
 					left: 5%;
 					bottom: 5%;
-					// background-position-y: 20%;
+					
 				}
 			}			
 		}
@@ -355,12 +375,12 @@ header{
 			background-position-x: 60%;
 			.btn-secondary{
 				bottom: 50%;
-				right: -43%;
+    			right: 8%;
 				@include mixins.bp-medium{
-					left: 15%;
+					right: 12%;
 				}
 				@include mixins.bp-large{
-					left: -68%;
+					right: 55%;
 					bottom: 5%;
 				}
 			}
@@ -370,7 +390,7 @@ header{
 			background-position-x: 40%;
 			.btn-secondary{
 				bottom: 0%;
-				left: 8%;
+    			left: 12%;
 				@include mixins.bp-medium{
 					left: 15%;
 				}
@@ -385,9 +405,9 @@ header{
 			background-position-x: 40%;
 			.btn-secondary{
 				bottom: 0%;
-				right: -43%;
+				right: 12%;
 				@include mixins.bp-large{
-					left: 35%;
+					right: 5%;
 					bottom: 5%;
 				}
 			}
@@ -563,7 +583,7 @@ header{
 			// grid-template-columns: 5px 1fr 1fr 1fr 1fr 5px;
 			// grid-template-rows: 1fr 7em 1fr 7em 1fr 7em 1fr 7em;
 			grid-template-columns: 1fr;
-			grid-template-rows: 1fr 1fr 1fr 1fr;
+			// grid-template-rows: 1fr 1fr 1fr 1fr;
 			@include mixins.bp-medium{
 				grid-template-columns: 1fr 1fr;
 				grid-template-rows: 1fr 1fr;
@@ -573,41 +593,45 @@ header{
 				grid-template-rows: 1fr;
 			}
 
-			
-			.product-shoe{
+			a{
+				text-decoration: none;
+				color: black;
+				.product-shoe{
 
-				&__img{
-					width: 100vw;
-					cursor: pointer;
-					@include mixins.bp-medium{
-						width:50vw;
+					&__img{
+						width: 100vw;
+						cursor: pointer;
+						@include mixins.bp-medium{
+							width:50vw;
+						}
+						@include mixins.bp-large{
+							width:25vw;
+						}
 					}
-					@include mixins.bp-large{
-						width:25vw;
+					&__title{
+						margin-top: 1em;
+						font-size: 1.2em;
+						font-display: flex;
+						flex-direction: column;
+						text-align: center;
+						font-weight: bold;
+						
+						
 					}
-				}
-				&__title{
-					margin-top: 1em;
-					font-size: 1.2em;
-					font-display: flex;
-					flex-direction: column;
-					text-align: center;
-					font-weight: bold;
+					&__description{
+						color: grey;
+						margin:.5em;
+						font-weight: normal;
+					}
+					&__price{
+						font-weight: bold;
+						// margin-bottom: ;
+					}
 					
 					
 				}
-				&__description{
-					color: grey;
-					margin:.5em;
-					font-weight: normal;
-				}
-				&__price{
-					font-weight: bold;
-					// margin-bottom: ;
-				}
-				
-				
 			}
+			
 		}
 		
 	}
@@ -725,8 +749,8 @@ header{
 }
 .btn-secondary{
 	position: absolute;
-	bottom: 50%;
-	left:8%;
+	// bottom: 50%;
+	// left:8%;
 	z-index: 2;
 	background: white;
 	
@@ -865,7 +889,7 @@ footer{
 	margin-bottom: 2em;
 	margin:0 auto;
 	#form{
-		max-width: 300px;
+		max-width: 400px;
   		margin: 10px auto;
   		padding: 10px 20px;
   		background: #e4e4e4;
@@ -956,6 +980,9 @@ footer{
 		margin: 1em auto;
 		margin-bottom:1em;
 		
+	}
+	input{
+		visibility: hidden;
 	}
   
 	&__button{
@@ -1061,7 +1088,11 @@ footer{
 	
 	
 	#nike-filter-menu{
-		display: none;
+		// display: none;
+		opacity: 0;
+		position: absolute;
+		top: 60%;
+		left: 50%;
 	}
 		
 	label {
@@ -1076,6 +1107,7 @@ footer{
 		}
 		@include mixins.bp-large{
 			display: none;
+			visibility: hidden;
 		}
 		
 	
@@ -1116,6 +1148,7 @@ footer{
 			
 		}
 		
+		
 	}
 	nav{
 		// display: none;
@@ -1128,8 +1161,10 @@ footer{
 		height: 0vh;
 		transition:  .5s;
 		overflow: hidden;
+		visibility: hidden;
 		@include mixins.bp-large{
 			overflow: visible;
+			visibility: visible;
 			top: 35%;
 			right: 100%;
 			width: 60vw;
@@ -1186,9 +1221,13 @@ footer{
 	}
 	#nike-filter-menu:checked ~ nav {
 		// display: block;
+		display: block;
+		height: 50vh;
+		visibility: visible;
 		height: 100vh;
 		@include mixins.bp-large{
 			display: none;
+			visibility: hidden;
 			
 		}
 	}
@@ -1203,7 +1242,7 @@ footer{
 
 	.new-product__container{
 		display: grid;
-	grid-template-columns: 1fr;
+		grid-template-columns: 1fr;
 	// grid-template-rows: 1fr 1fr 1fr 1fr;
 		@include mixins.bp-medium{
 			grid-template-columns: 1fr 1fr;
@@ -1223,45 +1262,53 @@ footer{
 		// 	grid-template-columns: repeat( auto-fit, minmax(25em, 1fr) );
 		// }
 		
-		
-		.new-product{
+		a{
+			text-decoration: none;
+			color: black;
+			
+			.new-product{
+				margin: 0em 0em 3em 0em;
 
-			&__img{
-				width: 100vw;
-				cursor: pointer;
-				@include mixins.bp-medium{
-					width:50vw;
+				&__img{
+					width: 100vw;
+					cursor: pointer;
+					margin-bottom: 3em;
+					@include mixins.bp-medium{
+						width:50vw;
+					}
+					@include mixins.bp-large{
+						width:25vw;
+					}
 				}
-				@include mixins.bp-large{
-					width:25vw;
+				
+				&__title{
+					margin: 3em;
+					font-size: 1.2em;
+					font-display: flex;
+					flex-direction: column;
+					text-align: center;
+					font-weight: bold;
+					// width: 50%;
+					
+					
 				}
-			}
-			&__title{
-				margin-top: 1em;
-				font-size: 1.2em;
-				font-display: flex;
-				flex-direction: column;
-				text-align: center;
-				font-weight: bold;
-				// width: 50%;
+				&__description{
+					color: grey;
+					margin:.5em;
+					font-weight: normal;
+				}
+				&__price{
+					font-weight: bold;
+					// margin-bottom: ;
+				}
+				figcaption{
+					margin:0;
+				}
 				
 				
 			}
-			&__description{
-				color: grey;
-				margin:.5em;
-				font-weight: normal;
-			}
-			&__price{
-				font-weight: bold;
-				// margin-bottom: ;
-			}
-			figcaption{
-				margin:0;
-			}
-			
-			
 		}
+		
 	}
 		
 	

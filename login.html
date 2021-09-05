@@ -15,61 +15,62 @@
 </head>
 <body>
     <a class="main-content-link" href="#main-content">Skip To Main Content</a>
-    <header class="nike-nav">
-        <a href="index.html">
-            <img src="/dist/img/nikeLogo.png" alt="nike logo" class="logo">
-        </a>
-        <div class="nike-header-menu">
-            <input type="checkbox" id="nike-header-menu" /> 
-            <label for="nike-header-menu" class="nike-menu">
-                <span></span>
-                <span></span>
-            </label>
-            
-            <nav>
-                <ul>
-                    <li><a href="newReleases.html">New Releases</a></li>
-                    <li><a href="#">Men</a></li>
-                    <li><a href="#">Women</a></li>
-                    <li><a href="#">Kids</a></li>
-                    <li><a href="#">Customize</a></li>
-                    <li><a href="#">Sale</a></li>
-                    <li><a href="login.html">Sign Up/ Login</a></li>
-                </ul>
-            </nav>
-            <div class="nike-header-icon-container">
-                <a href="#" aria-label="item-in-bag-icon"><img src="/dist/img/shopping-bag.png" alt="shopping bag logo" class="icons"> </a>
-				<a href="#" aria-label="search-icon"><img src="/dist/img/search-interface-symbol.png" alt="search logo" class="icons"></a> 
-            </div>
-        </div>
-    </header>
     <div class="loading">
         <img src="/dist/img/logo3.jpg" alt="nike loading logo">
     </div>
-    <section class="sale-banner">
-        <div class="sale-banner-div">
-            <p>Free Shipping & 60 day Free Returns</p>
-            <p>Join Now</p>
-        </div>
-    </section>
+    <header class="nike-nav">
+		<a href="index.html"> <img src="/dist/img/nikeLogo.png" alt="nike logo home button" class="logo"> </a>
+		<div class="nike-header-menu" aria-label="menu">
+			<input type="checkbox" id="nike-header-menu" />
+			
+			<label for="nike-header-menu" class="nike-menu" id="menu" aria-label="menu" tabindex="1"> 
+				<span></span> 
+				<span></span> 
+			</label>
+			<nav for="menu">
+				<ul>
+					<li><a href="newReleases.html">New Releases</a></li>
+					<li><a href="#">Men</a></li>
+					<li><a href="#">Women</a></li>
+					<li><a href="#">Kids</a></li>
+					<li><a href="#">Customize</a></li>
+					<li><a href="#">Sale</a></li>
+					<li><a href="login.html">Sign Up/ Login</a></li>
+				</ul>
+			</nav>
+			<div class="nike-header-icon-container"> 
+				<a href="#" aria-label="shopping-bag"><img src="/dist/img/shopping-bag.png" alt="shopping bag logo" class="icons"> </a>
+				<a href="#" aria-label="search"><img src="/dist/img/search-interface-symbol.png" alt="search logo" class="icons"></a> 
+			</div>	
+		</div>
+	</header>
+	<section class="sale-banner" >
+		<div class="sale-banner-div" role="#" aria-labelledby="banner">
+			<h3 id="banner">Free Shipping & 60 day Free Returns</h3>
+			<a href="">Join Now</a>
+		</div>	
+	</section>
     <main class="sign-up-main" id="main-content">
-        <form action="#" method="post" id="form" aria-label="signup-form">
-            <h1 for="form" aria-labelledby="sign-up">Sign Up</h1>
+        <form  id="form" role="#" aria-labelledby="sign-up">
+            <h1 id="sign-up" >Sign Up</h1>
             <fieldset class="sign-up fieldset">
                 <legend class="information">Information</legend>
                 <label for="first-name">First Name:</label>
-                    <input type="text" name="user_name" id="first-name">
+                    <input type="text" name="user_name" id="first-name" required>    
                 <label for="last-name">Last Name: </label>
-                    <input type="text" name="user_last_name" id="last-name">
+                    <input type="text" name="user_last_name" id="last-name" required>
                 <label for="email">Email: </label>
-                    <input type="email" name="user_mail" id="mail">
+                    <input for="text" id="email" name="email" class="text" type="email" required>
                 <label for="email">Password: </label>
-                    <input type="password" name="user_password" id="password">
-                <div class="radio-btns" id="age">
-                    <label  for="age"  aria-label="age">Age: <span class="disclaimer">*under 16 needs parent permission</span> 
-                    <div>
+                    <input for="text" id="password" name="password" class="text" type="password" required>
+                <div class="radio-btns" role="#" aria-labelledby="age">
+                    
+                        <h2 >Age: <span class="disclaimer">*under 16 needs parent permission</span> </h2>
+                    
+                    
+                    <div role="#" aria-labelledby="radio1">
                         <input type="radio" style="vertical-align: middle" name="user_age" value="16_18" id="16_18">
-                        <label for="16_18" class="inline">16-18</label> 
+                        <label id=""for="16_18" class="inline">16-18</label> 
                     </div>
                     <div>
                         <input type="radio" name="user_age" value="19_25" id="19_25">
@@ -83,7 +84,7 @@
                         <input type="radio" name="user_age" value="35+" id="35+">
                         <label for="35+" class="inline">35+</label>
                     </div>
-                </label>  
+                  
                 </div>
                 <div class="check-box"> 
                     <div>
@@ -99,8 +100,8 @@
             </fieldset>
            
         </form>
-        <form action="#" method="post" id="form" aria-label="login">
-            <h1>Login</h1>
+        <form action="#" method="post" id="form" role="#" aria-labelledby="login">
+            <h1 id="login">Login</h1>
             <fieldset class="login fieldset">
                  
                 <label for="email">Email: </label>
@@ -110,63 +111,68 @@
                 <button class="btn">Login</button>
             </fieldset>
         </form> 
-           <div class="accordian-item">
-            <input  class="featured-style__input" type="button" name="ambient-colors" aria-label="content">
-                <button class="accordian-item__button">Disclaimer</button>
-                <div class="accordian-item__content" id="disclaimer-content"  type="submit">
-                    <p for="disclaimer-content" aria-labelledby="disclaimer-content">Please be advised that it is not Nike's responsibility that any persons that sign up whether it is under 16 years of age or over.</p>
+           <div class="accordian-item" role="#" aria-labelledby="disclaimer">
+                <input type="button" aria-hidden="true" >
+                <button class="accordian-item__button" >Disclaimer</button>
+                <div class="accordian-item__content"  type="submit" id="disclaimer" >
+                    <p  >Please be advised that it is not Nike's responsibility that any persons that sign up whether it is under 16 years of age or over.</p>
                 </div>
            </div>
     </main>
-    <footer class="nike-footer">
-        <div id="external-links">
-            <ul class="external-links">
-                <li><a href="">gift cards</a></li>
-                <li><a href="">promotions</a></li>
-                <li><a href="">find a store</a></li>
-                <li><a href="">sign up for email</a></li>
-                <li><a href="">become a member</a></li>
-                <li><a href="">nike journal</a></li>
-                <li><a href="">send feedback</a></li>
-            </ul>
-        </div>
-        <div id="external-links">
-            <ul class="external-links flex-links">
-                <div d="flex-links">
-                    <li><a href="">get help</a></li>  
-                </div>
-                <div id="flex-links">
-                    <li><a href="">about nike</a></li>
-                </div>
-            </ul>
-        </div>
-        <section class="social-media">
-            <ul>
-                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fab fa-facebook-f"></i> </a></li>
-                <li><a href="#"><i class="fab fa-youtube"></i> </a></li>
-                <li><a href="#"><i class="fab fa-instagram"></i> </a></li>
-            </ul>
-        </section>
-        <div class="location-copyright">
-            <div class="location">
-                <div>
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p>United States</p>
-                </div>
-                <p>&#169; 2021 Nike, Inc. All Rights Reserved</p>
-            </div>
-            <ul class="terms-links">
-                <li><a href="">Guides</a></li>
-                <li><a href="">Terms of Sale</a></li>
-                <li><a href="">Terms of Use</a></li>
-                <li><a href="">Nike Privacy Policy</a></li>
-                <li><a href="">CA Supply Chains Act</a></li>
-            </ul>
-        </div>
-        
-        
-    </footer>
+    <footer class="nike-footer" role="#" aria-labelledby="external-links">
+		<div id="external-links" >
+			<nav aria-label="external-links">
+				<ul class="external-links">
+					<li><a href="">gift cards</a></li>
+					<li><a href="">promotions</a></li>
+					<li><a href="">find a store</a></li>
+					<li><a href="">sign up for email</a></li>
+					<li><a href="">become a member</a></li>
+					<li><a href="">nike journal</a></li>
+					<li><a href="">send feedback</a></li>
+				</ul>
+			</nav>	
+		</div>
+		<div id="external-links">
+			<ul class="external-links flex-links">
+				<div>
+					<li><a href="">get help</a></li> <span>+</span> </div>
+				<div>
+					<li><a href="">about nike</a></li> <span>+</span> </div>
+			</ul>
+		</div>
+		<section class="social-media" role="#" aria-labelledby="social">
+			<div id="social">
+				<nav aria-label="social-media">
+					<ul>
+						<li><a href="#" aria-label="twitter"><i class="fab fa-twitter"></i></a></li>
+						<li><a href="#" aria-label="facebook"><i class="fab fa-facebook-f"></i> </a></li>
+						<li><a href="#" aria-label="youtube"><i class="fab fa-youtube"></i> </a></li>
+						<li><a href="#" aria-label="instagram"><i class="fab fa-instagram"></i> </a></li>
+					</ul> 
+				</nav>
+			</div> 	
+		</section>
+		<div class="location-copyright" role="#" aria-labelledby="terms">
+			<div class="location" >
+				<div> <i class="fas fa-map-marker-alt"></i>
+					<p>United States</p>
+				</div>
+				<p>&#169; 2021 Nike, Inc. All Rights Reserved</p>
+			</div>
+			<div id="terms">
+				<nav  aria-label="terms">
+					<ul class="terms-links">
+						<li><a href="">Guides</a></li>
+						<li><a href="">Terms of Sale</a></li>
+						<li><a href="">Terms of Use</a></li>
+						<li><a href="">Nike Privacy Policy</a></li>
+						<li><a href="">CA Supply Chains Act</a></li>
+					</ul>
+				</nav>
+			</div>	
+		</div>
+	</footer>
     <script src="dist/js/main.js"></script>
 </body>
 </html>
