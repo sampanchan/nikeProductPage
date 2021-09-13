@@ -146,6 +146,11 @@ header{
 			position: absolute;
     		top: 40%;
     		right: 70%;
+			input{
+				@include mixins.bp-medium{
+					display: block;
+				}
+			}
 		}
 			
 		label {
