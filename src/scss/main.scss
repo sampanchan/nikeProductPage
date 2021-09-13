@@ -140,17 +140,18 @@ header{
 			}
 			
 		}
+		input{
+			@include mixins.bp-medium{
+				display: none;
+			}
+		}
 		
 		#nike-header-menu{
 			opacity: 0;
 			position: absolute;
     		top: 40%;
     		right: 70%;
-			input{
-				@include mixins.bp-medium{
-					display: block;
-				}
-			}
+			
 		}
 			
 		label {

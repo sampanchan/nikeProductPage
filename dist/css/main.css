@@ -258,16 +258,16 @@ header .nike-header-menu .nike-header-icon-container {
 header .nike-header-menu .nike-header-icon-container .icons {
   margin-left: 10px;
 }
+@media screen and (min-width: 768px) {
+  header .nike-header-menu input {
+    display: none;
+  }
+}
 header .nike-header-menu #nike-header-menu {
   opacity: 0;
   position: absolute;
   top: 40%;
   right: 70%;
-}
-@media screen and (min-width: 768px) {
-  header .nike-header-menu #nike-header-menu input {
-    display: block;
-  }
 }
 header .nike-header-menu label {
   margin-top: 1em;
