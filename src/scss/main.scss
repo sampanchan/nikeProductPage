@@ -51,25 +51,28 @@ div.loading {
 	background-color: white;;
 	pointer-events: none;
 	z-index: 1000;
-	opacity: 1;;
+	opacity: 1;
 	transition: 2s;
+	// position: relative;
 	img{
 		position: absolute;
-		top:25%;
-		left:20%;
-		@include mixins.bp-medium{
-			top:30%;
-			left:20%;
-		}
-		@include mixins.bp-large{
+		top:50%;
+		left:50%;
+		transform: translate(-50%, -50%);
+
+		// @include mixins.bp-medium{
+		// 	top:30%;
+		// 	left:20%;
+		// }
+		// @include mixins.bp-large{
 			
-			left:40%;
-		}
+		// 	left:40%;
+		// }
 	}
 
 
 	&.hide {
-		opacity: 0;;
+		opacity: 0;
 		
 	}
 }
@@ -182,7 +185,7 @@ header{
 				background: black;
 
 				&:nth-of-type(1) {
-					top: 25%;
+					top: 30%;
 					transform: rotate(-45deg);	
 				}
 				&:nth-of-type(2) {
@@ -304,12 +307,13 @@ header{
 	}
 }
 .nike-main{
+	width: 100%;
 	
 	.nike-title{
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		margin-left:20px ;
+		// margin-left:20px ;
 		>h1{
 			text-transform: uppercase;
 			font-weight: 800;
@@ -354,68 +358,52 @@ header{
 			background-size: cover;
 			background-repeat:none ;
 			background-position-y: 60%;
-			width: 50vw;
+			width: 100%;
 			height: 40vh;
+			position: relative;
 			@include mixins.bp-large{
-				width: 25vw;
+				width: 100%;
 			}
 		}
 		.max-one{
 			// grid-column: 1;
 			background-image: url(/dist/img/nike1.jpg);
 			.btn-secondary{
-				bottom: 50%;
-    			right: 62%;
-				@include mixins.bp-medium{
-					left: 15%;
-				}
-				@include mixins.bp-large{
-					left: 5%;
-					bottom: 5%;
-					
-				}
+				bottom: 20px;
+				left: 50%;
+				transform: translate(-50%, 0);
+				
 			}			
 		}
 		.max-two{
 			background-image: url(/dist/img/nike2.jpg);
 			background-position-x: 60%;
 			.btn-secondary{
-				bottom: 50%;
-    			right: 8%;
-				@include mixins.bp-medium{
-					right: 12%;
-				}
-				@include mixins.bp-large{
-					right: 55%;
-					bottom: 5%;
-				}
+				bottom: 20px;
+				left: 50%;
+				transform: translate(-50%, 0);
+    			
+				
 			}
 		}
 		.max-three{
 			background-image: url(/dist/img/nikeKids2.jpg);
 			background-position-x: 40%;
 			.btn-secondary{
-				bottom: 0%;
-    			left: 12%;
-				@include mixins.bp-medium{
-					left: 15%;
-				}
-				@include mixins.bp-large{
-					left: 58%;
-					bottom: 5%;
-				}
+				bottom: 20px;
+				left: 50%;
+				transform: translate(-50%, 0);
+				
 			}
 		}
 		.max-four{
 			background-image: url(/dist/img/nike3.jpg);
 			background-position-x: 40%;
 			.btn-secondary{
-				bottom: 0%;
-				right: 12%;
-				@include mixins.bp-large{
-					right: 5%;
-					bottom: 5%;
-				}
+				bottom: 20px;
+				left: 50%;
+				transform: translate(-50%, 0);
+				
 			}
 		}
 
@@ -429,7 +417,7 @@ header{
 			display: grid;
 			grid-template-columns: 5px 1fr 5px;
 			grid-template-rows: 1fr 1fr;
-			grid-row-gap:1em ;
+			grid-row-gap:1.5em ;
 			@include mixins.bp-medium{
 				grid-template-columns:  1fr .4em 1fr;;
 				grid-template-rows: 1fr; 
@@ -463,15 +451,22 @@ header{
 				background-image: url(/dist/img/nike14.jpg);
 				background-size: cover;
 				background-repeat: no-repeat;
-				width: 97vw;
+				width: 100%;
 				height: 90vh;
+				
+				// margin: 1em;
 				@include mixins.bp-medium{
 					grid-column: 1;
 					grid-row: 1;
-					width: 50vw;
+					// width: 50vw;
 					height: 65vh;
 					background-position-y: 70%;
 				}
+				// &:hover{
+				// 	transition: 1s ease-in-out;
+				// 	background-size: auto 150%;
+					
+				// }
 			}
 			#outfit-essentials-header{
 				bottom: 58%;
@@ -586,6 +581,7 @@ header{
 		
 		.tertiary-grid{
 			display: grid;
+			width: 100%;
 			// grid-template-columns: 5px 1fr 1fr 1fr 1fr 5px;
 			// grid-template-rows: 1fr 7em 1fr 7em 1fr 7em 1fr 7em;
 			grid-template-columns: 1fr;
@@ -605,13 +601,13 @@ header{
 				.product-shoe{
 
 					&__img{
-						width: 100vw;
+						width: 100%;
 						cursor: pointer;
 						@include mixins.bp-medium{
-							width:50vw;
+							width:100%;
 						}
 						@include mixins.bp-large{
-							width:25vw;
+							width:100%;
 						}
 					}
 					&__title{
@@ -657,11 +653,18 @@ header{
 	}
 	
 	.member-benefits{
-		display: flex;
-		flex-direction: column;
+		// display: flex;
+		// flex-direction: column;
+		
+
 		align-items: center;
 		margin: 0;
 		cursor: pointer;
+		@include mixins.bp-medium{
+			margin-bottom: 3em;
+			
+		}
+		
 		
 		a{
 			text-decoration: none;
@@ -670,27 +673,38 @@ header{
 			font-size: 1.2em;
 			
 			
-			&__figure{
+			
+			.member-benefits__figure{
+				display: grid;
+				grid-template-columns: 1fr;
+				justify-items: center;
+    			align-items: center;
+				@include mixins.bp-medium{
+					grid-template-columns: 1fr 1fr;
+					justify-items: center;
+    				align-items: center;
+					
+				}
 				img{
-					width:100vw;
+					width:80%;
 				}
 				
 			
 				figcaption{
 					margin-left:1em;
-					grid-column: 2;
-					grid-row: 2;
+					// grid-column: 2;
+					// grid-row: 2;
 					align-self: center;
-					@include mixins.bp-medium{
-						grid-column: 3;
-						grid-row: 1;
-						align-self: center;
-					}
-					@include mixins.bp-large{
-						grid-column: 2;
-						grid-row: 2;
-						align-self: center;
-					}
+					// @include mixins.bp-medium{
+					// 	grid-column: 3;
+					// 	grid-row: 1;
+					// 	align-self: center;
+					// }
+					// @include mixins.bp-large{
+					// 	grid-column: 2;
+					// 	grid-row: 2;
+					// 	align-self: center;
+					// }
 					
 					button{
 						margin:.5em;
@@ -707,7 +721,7 @@ header{
 		}	
 	}
 	.nike-links{
-		margin-top: 2em;
+		margin: 2em;
 		ul{
 			list-style: none;
 			display: flex;
@@ -775,6 +789,14 @@ header{
 footer{
 	background: black;
 	
+	@include mixins.bp-medium{
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+		padding: 3em;
+	}
+
+	
 	.external-links{
 		margin-top: 2em;
 		padding-top: 2em;
@@ -783,6 +805,7 @@ footer{
 		padding-left: 1em;
 		@include mixins.bp-medium{
 			text-align: center;
+			padding-left: none;
 		}
 		
 		li{
@@ -845,6 +868,10 @@ footer{
 		.location{
 			margin-top: .5em;
 			margin-left:1.5em;
+			@include mixins.bp-medium{
+				margin-top: 2em;
+			}
+			
 			>div{
 				display: flex;
 				flex-direction: row;
@@ -1148,7 +1175,7 @@ footer{
 			}
 			&:nth-of-type(2) {
 				right: -1%;
-    			top: -11px;
+    			top: -12px;
 				transform: rotate(45deg);	
 			}
 			
@@ -1276,14 +1303,14 @@ footer{
 				margin: 0em 0em 3em 0em;
 
 				&__img{
-					width: 100vw;
+					width: 100%;
 					cursor: pointer;
 					margin-bottom: 3em;
 					@include mixins.bp-medium{
-						width:50vw;
+						// width:50%;
 					}
 					@include mixins.bp-large{
-						width:25vw;
+						// width:25vw;
 					}
 				}
 				
